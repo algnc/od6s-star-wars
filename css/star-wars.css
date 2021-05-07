@@ -9,9 +9,7 @@
   border: 0px;
 }
 
-.profile-img-right {
-  flex: 0 0 200px !important;
-  height: 200px !important;
+.profile-img {
   margin-left: 10px;
   border: 0px;
 }
