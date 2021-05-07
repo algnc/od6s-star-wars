@@ -13,7 +13,9 @@
   "styles": [
 	"css/star-wars.css"
 	],
-  "languages": [],
+  "languages": [
+	"lang/en.json"
+	],
   "url": "https://github.com/mooped/foundryvtt-dcc-kith",
   "manifest": "https://github.com/mooped/foundryvtt-dcc-kith/raw/master/module.json",
   "download": "https://github.com/mooped/foundryvtt-dcc-kith/archive/0.0.1.zip",
