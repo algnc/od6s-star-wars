@@ -16,8 +16,8 @@
   "languages": [
 	"lang/en.json"
 	],
-  "url": "https://github.com/mooped/foundryvtt-dcc-kith",
-  "manifest": "https://github.com/mooped/foundryvtt-dcc-kith/raw/master/module.json",
-  "download": "https://github.com/mooped/foundryvtt-dcc-kith/archive/0.0.1.zip",
+  "url": "https://github.com/algnc/od6s-star-wars",
+  "manifest": "https://raw.githubusercontent.com/algnc/od6s-star-wars/master/module.json",
+  "download": "https://github.com/algnc/od6s-star-wars/archive/refs/heads/master.zip",
   "license": ""
 }
