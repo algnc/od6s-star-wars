@@ -9,6 +9,6 @@ Hooks.once('init', async function () {
   console.log(`Star Wars | Initializing Star Wars Sheet for od6s`)
 
   // Register sheet application classes
-  Actors.registerSheet('od6s-star-wars',StarWarsSheets.ActorSheetStarWars)
+  Actors.registerSheet('od6s-star-wars',StarWarsSheets.ActorSheetStarWars, {label: "od6s-star-wars.ActorSheetStarWars"})
 })
 
