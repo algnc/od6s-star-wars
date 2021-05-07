@@ -1,0 +1,21 @@
+{
+  "name": "od6s-star-wars",
+  "title": "Star Wars Sheets for OpenD6",
+  "description": "Star Wars Sheets for OpenD6 in FoundryVTT!",
+  "version": "0.0.1",
+  "minimumCoreVersion": "0.6.5",
+  "compatibleCoreVersion": "0.7.9",
+  "author": "Steve Barnett",
+  "system": "dcc",
+  "esmodules": [
+	"module/od6s-star-wars.js"
+	],
+  "styles": [
+	"css/star-wars.css"
+	],
+  "languages": [],
+  "url": "https://github.com/mooped/foundryvtt-dcc-kith",
+  "manifest": "https://github.com/mooped/foundryvtt-dcc-kith/raw/master/module.json",
+  "download": "https://github.com/mooped/foundryvtt-dcc-kith/archive/0.0.1.zip",
+  "license": ""
+}

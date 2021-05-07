@@ -1,0 +1,19 @@
+.background-image {
+    background-image: linear-gradient(#f6e09a, white);
+}
+
+.sw-logo {
+  flex: 0 0 200px !important;
+  height: 75px !important;
+  margin-right: 10px;
+  border: 0px;
+}
+
+.profile-img-right {
+  flex: 0 0 200px !important;
+  height: 200px !important;
+  margin-left: 10px;
+  border: 0px;
+}
+}
+

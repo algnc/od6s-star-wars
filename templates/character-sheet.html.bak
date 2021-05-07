@@ -1,0 +1,153 @@
+<div class=background-image>
+<form class="{{cssClass}} flexcol" autocomplete="off">
+    {{!-- Sheet Header --}}
+    <header class="sheet-header flex-group-left">
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="200" width="200"
+             alt="Actor Image"/>
+        <div>
+            <h1 class="charname">
+                <input title="{{localize OD6S.CHAR_NAME}}" name="name" type="text" value="{{actor.name}}"
+                       placeholder="{{localize OD6S.CHAR_NAME}}" data-dtype="String"/>
+            </h1>
+            <div class="grid grid-2col">
+                <div>
+                    <div
+                        {{#if (eq data.sheetmode.value "freeedit")}}
+                        class="grid grid-3col-type"
+                        {{else}}
+                        class="grid grid-2col-type"
+                        {{/if}}>
+                        <label for="data.chartype.content">{{localize data.chartype.label}}:</label>
+                        <input title="{{localize data.chartype.label}}" name="data.chartype.content" type="text"
+                               value="{{data.chartype.content}}" placeholder="{{localize data.chartype.label}}"
+                               data-dtype="{{data.chartype.type}}"/>
+                        {{#if (eq data.sheetmode.value "freeedit")}}
+                            <button class="reset-template">Clear</button>
+                        {{/if}}
+                    </div>
+                </div>
+                <div>
+                    <div class="grid grid-2col-species">
+                        <label for="data.species.content">{{localize data.species.label}}:</label>
+                        <input title="{{localize data.species.label}}" name="data.species.content" type="text"
+                               value="{{data.species.content}}" placeholder="{{localize data.species.label}}"
+                               data-dtype="{{data.species.type}}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-4col header-fields">
+                <div class="flexrow flex-group-center">
+                    <label for="data.characterpoints.value">{{localize data.characterpoints.short_label}}:</label>
+                    <input title="{{localize data.characterpoints.label}}" name="data.characterpoints.value"
+                           type="number" min="0" max="99"
+                           value="{{data.characterpoints.value}}" placeholder="0"
+                           data-dtype="{{data.characterpoints.type}}"/>
+                </div>
+                <div class="flexrow flex-group-center">
+                    <label for="data.fatepoints.value">{{getFatePointsShortName}}:</label>
+                    <input title="{{getFatePointsShortName}}" name="data.fatepoints.value" type="number"
+                           min="0" max="99" value="{{data.fatepoints.value}}" placeholder="0"
+                           data-dtype="{{data.fatepoints.type}}"/>
+                    <div class="flexrow flex-group-left fatepointeffect"
+                         title="{{localize 'OD6S.IN_EFFECT'}}">
+                        <input type="checkbox"
+                            {{#unless data.fatepoints.value }}
+                                {{#unless actor.flags.od6s.fatepointeffect}}disabled{{/unless}}
+                            {{/unless}}
+                               data-dtype="Boolean" {{checked actor.flags.od6s.fatepointeffect}}>
+                    </div>
+                </div>
+                {{#if (ne (getCustomField1) "")}}
+                    <div class="flexrow flex-group-center">
+                        <label for="data.custom1.value">{{getCustomField1Short}}:</label>
+                        <input title="{{getCustomField1Short}}" name="data.custom1.value" type="{{getCustomField1Type}}"
+                               value="{{data.custom1.value}}" data-dtype="{{getCustomField1FType}}"
+                            {{#if (eq (getCustomField1Type) "number") }}
+                               min="0" max="99" placeholder="0"
+                            {{/if}}/>
+                    </div>
+                {{/if}}
+                <div class="flexrow flex-group-center">
+                    <label for="data.metaphysicsextranormal.value">{{getMetaphysicsExtranormalName}}:</label>
+                    <input type="checkbox" name="data.metaphysicsextranormal.value"
+                           id="data.metaphysicsextranormal.value" data-dtype="Boolean"
+                        {{checked data.metaphysicsextranormal.value}}>
+                </div>
+                <div class="flexrow flex-group-center">
+                    <label for="data.move.value">{{localize data.move.label}}:</label>
+                    <input title="{{localize data.move.label}}" name="data.move.value" type="number" min="0" max="99"
+                           value="{{data.move.value}}" placeholder="10" data-dtype="{{data.move.type}}"/>
+                </div>
+                <div class="flexrow flex-group-center">
+                    <label for="data.credits.value">{{localize data.credits.label}}:</label>
+                    <input title="{{localize data.credits.label}}" name="data.credits.value" type="number" min="0"
+                           max="999999999999" value="{{data.credits.value}}" placeholder="{{data.credits.value}}"
+                           data-dtype="{{data.credits.type}}"/>
+                </div>
+                <div class="flexrow flex-group-left">
+                    <label for="data.wounds.value">{{localize 'OD6S.WOUNDS'}}:</label>
+                    <select name="data.wounds.value" id="data.wounds.value" style="width: 70px;">
+                        {{#select data.wounds.value}}
+                            {{#each (getWoundLevels 'character') as |level key|}}
+                                <option value="{{ key }}">
+                                    {{localize (woundsFromValue key 'character')}}
+                                </option>
+                            {{/each}}
+                        {{/select}}
+                    </select>
+                </div>
+                <div class="flexrow flex-group-left sheetmode">
+                    <label for="data.sheetmode.value">{{localize 'OD6S.SHEETMODE'}}:</label>
+                    <select name="data.sheetmode.value" id="data.sheetmode.value" style="width: 70px;">
+                        {{#select data.sheetmode.value}}
+                            <option value="normal">{{localize 'OD6S.SHEETMODE_NORMAL'}}</option>
+                            <option value="advance">{{localize 'OD6S.SHEETMODE_ADVANCE'}}</option>
+                            <option value="freeedit">{{localize 'OD6S.SHEETMODE_FREEDIT'}}</option>
+                        {{/select}}
+                    </select>
+                </div>
+		<div class="flexrow flex-group-left sheetmode">
+                <img src=modules/od6s-star-wars/templates/logo.webp>
+                </div>
+            </div>
+        </div>
+    </header>
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="attributes">{{localize 'OD6S.TAB_ATTRSKILLS'}}</a>
+        <a class="item" data-tab="combat">{{localize 'OD6S.TAB_COMBAT'}}</a>
+        {{#if data.metaphysicsextranormal.value}}
+            <a class="item" data-tab="metaphysics">{{getMetaphysicsName}}</a>
+        {{/if}}
+        <a class="item" data-tab="inventory">{{localize 'OD6S.TAB_INVENTORY'}}</a>
+        <a class="item" data-tab="special-abilities">{{localize 'OD6S.TAB_SPECIAL_ABILITIES'}}</a>
+        {{# if (hasCybernetics actor) }}
+            <a class="item" data-tab="cybernetics">{{localize 'OD6S.TAB_CYBERNETICS'}}</a>
+        {{/if}}
+        <a class="item" data-tab="description">{{localize 'OD6S.TAB_BIOGRAPHY'}}</a>
+    </nav>
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+        {{!-- Attribues Tab --}}
+        {{> systems/od6s/templates/actor/character/tabs/attributes.html}}
+
+        {{!-- Combat Tab --}}
+        {{> systems/od6s/templates/actor/common/tabs/combat.html}}
+
+        {{!-- Metaphysics Tab --}}{{#if data.metaphysicsextranormal.value}}
+        {{> systems/od6s/templates/actor/character/tabs/metaphysics.html}}{{/if}}
+
+        {{!-- Inventory Tab --}}
+        {{> systems/od6s/templates/actor/character/tabs/inventory.html}}
+
+        {{!-- Owned Special Abilities Tab --}}
+        {{> systems/od6s/templates/actor/common/tabs/special-abilities.html}}
+
+        {{!-- Owned Cybernetics Tab --}}
+        {{>systems/od6s/templates/actor/common/tabs/cybernetics.html}}
+
+        {{!-- Biography Tab --}}
+        {{> systems/od6s/templates/actor/character/tabs/biography.html}}
+    </section>
+</form>
+</div>
