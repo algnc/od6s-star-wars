@@ -1,9 +1,12 @@
-# Kith sheets for Dungeon Crawl Classics in Foundry VTT
+# Star Wars sheets for Open D6 in Foundry VTT
 
-Expands the [Dungeon Crawl Classics system](https://github.com/cyface/foundryvtt-dcc/) for the [Foundry Virtual Tabletop](https://foundryvtt.com) to include Kith character sheets.
+Expands the [Open D6 System](https://gitlab.com/vtt2/opend6-space) for the [Foundry Virtual Tabletop](https://foundryvtt.com) to include Star Wars character sheets.
 
-Manifest URL: https://github.com/mooped/foundryvtt-dcc-kith/raw/master/module.json
+Manifest URL: 
 
 ##### Maintainers
-* Steve Barnett (@mooped)
+* Christian Ovsenik (@algnc) 
+
+##### Credits
+* Based on a template provided by Steve Barnett (@mooped)
 
