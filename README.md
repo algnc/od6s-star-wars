@@ -2,7 +2,7 @@
 
 Expands the [Open D6 System](https://gitlab.com/vtt2/opend6-space) for the [Foundry Virtual Tabletop](https://foundryvtt.com) to include Star Wars character sheets.
 
-Manifest URL: 
+Manifest URL: https://raw.githubusercontent.com/algnc/od6s-star-wars/master/module.json 
 
 ##### Maintainers
 * Christian Ovsenik (@algnc) 
