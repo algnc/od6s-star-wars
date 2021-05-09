@@ -17,6 +17,14 @@ class ActorSheetStarWars extends OD6SActorSheet {
   /** @override */
   getData () {
     const data = super.getData()
+    if (!data.darkSidePoints) {
+      this.actor.update({
+        'data.darkSidePoints': {
+          label: 'od6s-star-wars.darkSidePoints',
+          value: '0'
+        }
+      })
+    }
     return data
   }
 }

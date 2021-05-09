@@ -59,6 +59,11 @@
                            id="data.metaphysicsextranormal.value" data-dtype="Boolean"
                         {{checked data.metaphysicsextranormal.value}}>
                 </div>
+		<div class="flexrow flex-group-center">
+                    <label for="data.darkSidePoints.value">{{localize data.darkSidePoints.label}}:</label>
+		<input title="{{localize data.darkSidePoints.label}}" name="data.darkSidePoints" type="number" min="0" max="99"
+                           value="{{data.darkSidePoints}}" placeholder="0"/>
+                </div>
                 <div class="flexrow flex-group-center">
                     <label for="data.move.value">{{localize data.move.label}}:</label>
                     <input title="{{localize data.move.label}}" name="data.move.value" type="number" min="0" max="99"
