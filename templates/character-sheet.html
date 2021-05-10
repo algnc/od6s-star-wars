@@ -8,14 +8,14 @@
                 <input title="{{localize OD6S.CHAR_NAME}}" name="name" type="text" value="{{actor.name}}"
                        placeholder="{{localize OD6S.CHAR_NAME}}" data-dtype="String"/>
             </h1>
-                        <div><label for="data.chartype.content">{{localize data.chartype.label}}:</label>
+                        <div><b><label for="data.chartype.content">{{localize data.chartype.label}}:</label></b>
                         <input title="{{localize data.chartype.label}}" name="data.chartype.content" type="text"
                                value="{{data.chartype.content}}" placeholder="{{localize data.chartype.label}}"
                                data-dtype="{{data.chartype.type}}"/>
                         {{#if (eq data.sheetmode.value "freeedit")}}
                             <button class="reset-template">Clear</button>
                         {{/if}}</div>
-                        <div><label for="data.species.content">{{localize data.species.label}}:</label>
+                        <div><b><label for="data.species.content">{{localize data.species.label}}:</label></b>
 
                         <input title="{{localize data.species.label}}" name="data.species.content" type="text"
                                value="{{data.species.content}}" placeholder="{{localize data.species.label}}"
@@ -23,14 +23,14 @@
 	    <div class="grid grid-2col">
             <div class="grid grid-4col header-fields">
                 <div class="flexrow flex-group-center">
-                    <label for="data.characterpoints.value">{{localize data.characterpoints.short_label}}:</label>
+                    <b><label for="data.characterpoints.value">{{localize data.characterpoints.short_label}}:</label></b>
                     <input title="{{localize data.characterpoints.label}}" name="data.characterpoints.value"
                            type="number" min="0" max="99"
                            value="{{data.characterpoints.value}}" placeholder="0"
                            data-dtype="{{data.characterpoints.type}}"/>
                 </div>
                 <div class="flexrow flex-group-center">
-                    <label for="data.fatepoints.value">{{getFatePointsShortName}}:</label>
+                    <b><label for="data.fatepoints.value">{{getFatePointsShortName}}:</label></b>
                     <input title="{{getFatePointsShortName}}" name="data.fatepoints.value" type="number"
                            min="0" max="99" value="{{data.fatepoints.value}}" placeholder="0"
                            data-dtype="{{data.fatepoints.type}}"/>
@@ -54,29 +54,29 @@
                     </div>
                 {{/if}}
                 <div class="flexrow flex-group-center">
-                    <label for="data.metaphysicsextranormal.value">{{getMetaphysicsExtranormalName}}:</label>
+                    <b><label for="data.metaphysicsextranormal.value">{{getMetaphysicsExtranormalName}}:</label></b>
                     <input type="checkbox" name="data.metaphysicsextranormal.value"
                            id="data.metaphysicsextranormal.value" data-dtype="Boolean"
                         {{checked data.metaphysicsextranormal.value}}>
                 </div>
 		<div class="flexrow flex-group-center">
-                    <label for="data.darkSidePoints.value">{{localize data.darkSidePoints.label}}:</label>
+                    <b><label for="data.darkSidePoints.value">{{localize data.darkSidePoints.label}}:</label></b>
 		<input title="{{localize data.darkSidePoints.label}}" name="data.darkSidePoints" type="number" min="0" max="99"
                            value="{{data.darkSidePoints}}" placeholder="0"/>
                 </div>
                 <div class="flexrow flex-group-center">
-                    <label for="data.move.value">{{localize data.move.label}}:</label>
+                    <b><label for="data.move.value">{{localize data.move.label}}:</label></b>
                     <input title="{{localize data.move.label}}" name="data.move.value" type="number" min="0" max="99"
                            value="{{data.move.value}}" placeholder="10" data-dtype="{{data.move.type}}"/>
                 </div>
                 <div class="flexrow flex-group-center">
-                    <label for="data.credits.value">{{localize data.credits.label}}:</label>
+                    <b><label for="data.credits.value">{{localize data.credits.label}}:</label></b>
                     <input title="{{localize data.credits.label}}" name="data.credits.value" type="number" min="0"
                            max="999999999999" value="{{data.credits.value}}" placeholder="{{data.credits.value}}"
                            data-dtype="{{data.credits.type}}"/>
                 </div>
                 <div class="flexrow flex-group-left">
-                    <label for="data.wounds.value">{{localize 'OD6S.WOUNDS'}}:</label>
+                    <b><label for="data.wounds.value">{{localize 'OD6S.WOUNDS'}}:</label></b>
                     <select name="data.wounds.value" id="data.wounds.value" style="width: 70px;">
                         {{#select data.wounds.value}}
                             {{#each (getWoundLevels 'character') as |level key|}}
@@ -88,7 +88,7 @@
                     </select>
                 </div>
                 <div class="flexrow flex-group-left sheetmode">
-                    <label for="data.sheetmode.value">{{localize 'OD6S.SHEETMODE'}}:</label>
+                    <b><label for="data.sheetmode.value">{{localize 'OD6S.SHEETMODE'}}:</label></b>
                     <select name="data.sheetmode.value" id="data.sheetmode.value" style="width: 70px;">
                         {{#select data.sheetmode.value}}
                             <option value="normal">{{localize 'OD6S.SHEETMODE_NORMAL'}}</option>
