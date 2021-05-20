@@ -45,7 +45,7 @@
                 </div>
                 {{#if (ne (getCustomField1) "")}}
                     <div class="flexrow flex-group-center">
-                        <label for="data.custom1.value">{{getCustomField1Short}}:</label>
+                        <b><label for="data.custom1.value">{{getCustomField1Short}}:</label></b>
                         <input title="{{getCustomField1Short}}" name="data.custom1.value" type="{{getCustomField1Type}}"
                                value="{{data.custom1.value}}" data-dtype="{{getCustomField1FType}}"
                             {{#if (eq (getCustomField1Type) "number") }}
