@@ -37,10 +37,10 @@
                     <div class="flexrow flex-group-left fatepointeffect"
                          title="{{localize 'OD6S.IN_EFFECT'}}">
                         <input type="checkbox"
-                            {{#unless data.fatepoints.value }}
+			       {{#unless (gt data.fatepoints.value 0)}}
                                 {{#unless actor.flags.od6s.fatepointeffect}}disabled{{/unless}}
                             {{/unless}}
-                               data-dtype="Boolean" {{checked actor.flags.od6s.fatepointeffect}}>
+                               data-dtype="Boolean" {{checked actor.data.flags.od6s.fatepointeffect}}>
                     </div>
                 </div>
                 {{#if (ne (getCustomField1) "")}}
