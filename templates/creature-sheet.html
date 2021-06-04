@@ -1,4 +1,4 @@
-<div class=background-image>
+<div class="background-image"/>
 <form class="{{cssClass}} flexcol" autocomplete="off">
     {{!-- Sheet Header --}}
     <header class="sheet-header flex-group-left">
@@ -30,15 +30,15 @@
                         {{/select}}
                     </select>
                 </div>
-                <div class="flexrow flex-group-left sheetmode">
-                    <label for="sheetmode">{{localize 'OD6S.SHEETMODE'}}:</label>
-                    <select name="sheetmode" id="sheetmode" style="width: 70px;">
-                        {{#select data.sheetmode.value}}
-                            <option value="normal">{{localize 'OD6S.SHEETMODE_NORMAL'}}</option>
-                            <option value="freeedit">{{localize 'OD6S.SHEETMODE_FREEDIT'}}</option>
-                        {{/select}}
-                    </select>
-                </div>
+            <div class="flexrow flex-group-left sheetmode">
+                <label for="data.sheetmode.value">{{localize 'OD6S.SHEETMODE'}}:</label>
+                <select name="data.sheetmode.value" id="data.sheetmode.value" style="width: 70px;">
+                    {{#select data.sheetmode.value}}
+                        <option value="normal">{{localize 'OD6S.SHEETMODE_NORMAL'}}</option>
+                        <option value="freeedit">{{localize 'OD6S.SHEETMODE_FREEDIT'}}</option>
+                    {{/select}}
+                </select>
+            </div>
             </div>
         </div>
 	<img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="200" width="200"
