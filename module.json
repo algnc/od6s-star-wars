@@ -2,7 +2,7 @@
   "name": "od6s-star-wars",
   "title": "Star Wars Sheets for OpenD6",
   "description": "Star Wars Sheets for OpenD6 in FoundryVTT!",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "minimumCoreVersion": "0.8.6",
   "compatibleCoreVersion": "0.8.6",
   "author": "Christian Ovsenik",
