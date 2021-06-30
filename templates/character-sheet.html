@@ -111,6 +111,9 @@
             <a class="item" data-tab="cybernetics">{{localize 'OD6S.TAB_CYBERNETICS'}}</a>
         {{/if}}
         <a class="item" data-tab="description">{{localize 'OD6S.TAB_BIOGRAPHY'}}</a>
+        {{#if (eq data.sheetmode.value 'freeedit') }}
+        <a class="item" data-tab="data"><i class="fas fa-cog"></i></a>
+        {{/if}}
     </nav>
     {{!-- Sheet Body --}}
     <section class="sheet-body">
@@ -134,6 +137,11 @@
 
         {{!-- Biography Tab --}}
         {{> systems/od6s/templates/actor/character/tabs/biography.html}}
+
+        {{#if (eq data.sheetmode.value 'freeedit') }}
+        {{!-- Data Tab --}}
+            {{> systems/od6s/templates/actor/common/tabs/data.html}}
+        {{/if}}
     </section>
 </form>
 </div>
