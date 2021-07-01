@@ -8,5 +8,4 @@ Manifest URL: https://raw.githubusercontent.com/algnc/od6s-star-wars/master/modu
 * Christian Ovsenik (@algnc) 
 
 ##### Credits
-* Based on a template created by Steve Barnett (@mooped)
-
+* Based on the od6s system for Foundry by @seumas
