@@ -49,6 +49,9 @@
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="main">{{localize 'OD6S.MAIN'}}</a>
         <a class="item" data-tab="combat">{{localize 'OD6S.TAB_COMBAT'}}</a>
+        {{#if (eq data.sheetmode.value 'freeedit') }}
+            <a class="item" data-tab="data"><i class="fas fa-cog"></i></a>
+        {{/if}}
     </nav>
     {{!-- Sheet Body --}}
     <section class="sheet-body">
@@ -57,5 +60,10 @@
 
         {{!-- Combat Tab --}}
         {{> systems/od6s/templates/actor/common/tabs/combat.html}}
+
+        {{#if (eq data.sheetmode.value 'freeedit') }}
+        {{!-- Data Tab --}}
+        {{> systems/od6s/templates/actor/common/tabs/data.html}}
+        {{/if}}
     </section>
 </form>
