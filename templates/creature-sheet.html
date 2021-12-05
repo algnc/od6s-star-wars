@@ -2,12 +2,15 @@
 <form class="{{cssClass}} flexcol" autocomplete="off">
     {{!-- Sheet Header --}}
     <header class="sheet-header flex-group-left">
-        <div class="grid grid-2col">
+        <div>
+            <div class="flexrow">
 	<img class="sw-logo" src="modules/od6s-star-wars/templates/logo.webp" width="150">
             <h1 class="charname">
                 <input title="{{localize OD6S.CHAR_NAME}}" name="name" type="text" value="{{actor.name}}"
                        placeholder="{{localize OD6S.CHAR_NAME}}" data-dtype="String"/>
             </h1>
+            </div>
+        <div class="grid grid-2col">
                     <div>
                         <label for="data.species.content">{{localize data.species.label}}:</label>
                         <input title="{{localize data.species.label}}" name="data.species.content" type="text"
@@ -17,7 +20,6 @@
                     <div><label for="data.move.value">{{localize data.move.label}}:</label>
                     <input title="{{localize data.move.label}}" name="data.move.value" type="number" min="0" max="99"
                            value="{{data.move.value}}" placeholder="10" data-dtype="{{data.move.type}}"/></div>
-		<div class="grid grid-2col">
                 <div class="flexrow flex-group-left">
                     <label for="data.wounds.value">{{localize 'OD6S.WOUNDS'}}:</label>
                     <select name="data.wounds.value" id="data.wounds.value" style="width: 70px;">

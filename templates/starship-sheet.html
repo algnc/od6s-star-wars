@@ -1,0 +1,132 @@
+<div class="background-image">
+    <form class="{{cssClass}} flexcol" autocomplete="off">
+        {{!-- Sheet Header --}}
+        <header class="sheet-header flex-group-left">
+            <div>
+                <div class="flexrow">
+                    <img class="sw-logo" src="modules/od6s-star-wars/templates/logo.webp" width="150">
+                    <h1 class="charname">
+                        <input title="{{localize OD6S.CHAR_NAME}}" name="name" type="text" value="{{actor.name}}"
+                               placeholder="{{localize OD6S.CHAR_NAME}}" data-dtype="String"/>
+                    </h1>
+                </div>
+                <div class="grid grid-2col">
+                    <div class="flex-left">
+                        <label for="data.vehicle_type.value">{{localize data.vehicle_type.label}}:</label>
+                        <input title="{{localize data.vehicle_type.label}}" name="data.vehicle_type.value" type="text"
+                               value="{{data.vehicle_type.value}}" size="12" data-dtype="{{data.vehicle_type.type}}"/>
+                    </div>
+                    <div class="flex-left">
+                        <label for="data.skill.value">{{localize data.skill.label}}:</label>
+                        <input title="{{localize data.skill.label}}" name="data.skill.value" type="text"
+                               value="{{data.skill.value}}" size="12" data-dskill="{{data.skill.skill}}"/>
+                    </div>
+                </div>
+                <div class="grid grid-4col">
+                    <div class="flexrow flex-group-left">
+                        <label for="data.scale.score">{{localize data.scale.label}}:</label>
+                        <input title="{{localize data.scale.label}}" name="data.scale.score" type="number" min="0"
+                               max="99"
+                               value="{{data.scale.score}}" placeholder="0" data-dtype="{{data.scale.type}}"/>
+                    </div>
+                    {{#if data.atmospheric.value}}
+                        <div class="flex-left">
+                            <label for="data.move.value">{{localize data.move.label}}:</label>
+                            <div class="grid grid-3col">
+                                <input title="{{localize 'OD6S.SPACE_MOVE'}}" name="data.move.value" type="number"
+                                       min="0"
+                                       max="99"
+                                       value="{{data.move.value}}" placeholder="10" data-dtype="{{data.move.type}}"/>
+                                <input title="{{localize data.atmospheric.move.label}}"
+                                       name="data.atmospheric.move.value"
+                                       type="number" min="0" max="9999" value="{{data.atmospheric.move.value}}"
+                                       data-dtype="{{data.atmospheric.move.type}}"/>
+                                <input title="{{localize data.atmospheric.kph.label}}" name="data.atmospheric.kph.value"
+                                       type="number" min="0" max="9999" value="{{data.atmospheric.kph.value}}"
+                                       data-dtype="{{data.atmospheric.kph.type}}"/>
+                            </div>
+                        </div>
+                    {{else}}
+                        <div class="flexrow flex-group-left">
+                            <label for="data.move.value">{{localize data.move.label}}:</label>
+                            <input title="{{localize data.move.label}}" name="data.move.value" type="number" min="0"
+                                   max="99"
+                                   value="{{data.move.value}}" placeholder="10" data-dtype="{{data.move.type}}"/>
+                        </div>
+                    {{/if}}
+                    <div class="flexrow flex-group-left">
+                        <label for="data.interstellar_drive.value">{{localize (getInterstellarDriveName)}}:</label>
+                        <input title="{{localize (getInterstellarDriveName)}}" name="data.interstellar_drive.value"
+                               type="number" min="0" max="99"
+                               value="{{data.interstellar_drive.value}}" placeholder="10"
+                               data-dtype="{{data.interstellar_drive.type}}"/>
+                    </div>
+                    <div class="flexrow flex-group-left">
+                        <label for="data.crew.value">{{localize data.crew.label}}:</label>
+                        <input title="{{localize data.crew.label}}" name="data.crew.value" type="number" min="0"
+                               max="99"
+                               value="{{data.crew.value}}" placeholder="10" data-dtype="{{data.crew.type}}"/>
+                    </div>
+                    <div class="flexrow flex-group-left">
+                        <label for="data.passengers.value">{{localize data.passengers.label}}:</label>
+                        <input title="{{localize data.passengers.label}}" name="data.passengers.value" type="number"
+                               min="0"
+                               max="99"
+                               value="{{data.passengers.value}}" placeholder="0" data-dtype="{{data.passengers.type}}"/>
+                    </div>
+                    <div class="flexrow flex-group-left">
+                        <label for="data.cargo_capacity.value">{{localize data.cargo_capacity.label}}:</label>
+                        <input title="{{localize data.cargo_capacity.label}}" name="data.cargo_capacity.value"
+                               type="number"
+                               min="0" max="99"
+                               value="{{data.cargo_capacity.value}}" placeholder="0"
+                               data-dtype="{{data.cargo_capacity.type}}"/>
+                    </div>
+                    <div class="flexrow flex-group-left">
+                        <label for="data.length.value">{{localize data.length.label}}:</label>
+                        <input title="{{localize data.length.label}}" name="data.length.value" type="number" min="0"
+                               max="99"
+                               value="{{data.length.value}}" placeholder="0" data-dtype="{{data.length.type}}"/>
+                    </div>
+                    <div class="flexrow flex-group-left">
+                        <label for="data.tonnage.value">{{localize data.tonnage.label}}:</label>
+                        <input title="{{localize data.tonnage.label}}" name="data.tonnage.value" type="number" min="0"
+                               max="99"
+                               value="{{data.tonnage.value}}" placeholder="0" data-dtype="{{data.tonnage.type}}"/>
+                    </div>
+                    <div class="flexrow flex-group-left">
+                        <label for="data.damage.value">{{localize 'OD6S.DAMAGE'}}:</label>
+                        <select name="data.damage.value" id="data.damage.value" style="width: 70px;">
+                            {{#select data.damage.value}}
+                                {{#each (getVehicleDamageLevels) as |level key|}}
+                                    <option value="{{ key }}">
+                                        {{localize key}}
+                                    </option>
+                                {{/each}}
+                            {{/select}}
+                        </select>
+                    </div>
+                    <div class="flexrow flex-group-left"
+                         title="{{localize 'OD6S.ATMOSPHERIC_CAPABILITY'}}">
+                        <label for="data.atmospheric.value">{{localize 'OD6S.ATMOSPHERIC_CAPABILITY'}}</label>
+                        <input id="data.atmospheric.value" name="data.atmospheric.value" type="checkbox"
+                               data-dtype="Boolean" {{checked data.atmospheric.value}}/>
+                    </div>
+                    <div class="flexrow flex-group-left sheetmode">
+                        <label for="data.sheetmode.value">{{localize 'OD6S.SHEETMODE'}}:</label>
+                        <select name="data.sheetmode.value" id="data.sheetmode.value" style="width: 70px;">
+                            {{#select data.sheetmode.value}}
+                                <option value="normal">{{localize 'OD6S.SHEETMODE_NORMAL'}}</option>
+                                <option value="freeedit">{{localize 'OD6S.SHEETMODE_FREEDIT'}}</option>
+                            {{/select}}
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </header>
+        {{> systems/od6s/templates/actor/starship/starship-sheet-body.html}}
+    </form>
+</div>
+
+
+
