@@ -2,60 +2,70 @@
 <form class="{{cssClass}} flexcol" autocomplete="off">
     {{!-- Sheet Header --}}
     <header class="sheet-header flex-group-left">
-	<div class="grid grid-2col">
-	<img class="sw-logo" src="modules/od6s-star-wars/templates/logo.webp" width="150">
-            <h1 class="charname">
-                <input title="{{localize OD6S.CHAR_NAME}}" name="name" type="text" value="{{actor.name}}"
-                       placeholder="{{localize OD6S.CHAR_NAME}}" data-dtype="String"/>
-            </h1>
-                     <div>
-                    <label for="data.chartype.content">{{localize data.chartype.label}}:</label>
-                        <input title="{{localize data.chartype.label}}" name="data.chartype.content" type="text"
-                               value="{{data.chartype.content}}" placeholder="{{localize data.chartype.label}}"
-                               data-dtype="{{data.chartype.type}}"/>
-                    </div>
-                    <div>
-                        <label for="data.species.content">{{localize data.species.label}}:</label>
-                        <input title="{{localize data.species.label}}" name="data.species.content" type="text"
-                               value="{{data.species.content}}" placeholder="{{localize data.species.label}}"
-                               data-dtype="{{data.species.type}}"/>
-                    </div>
+        <div>
+            <div class="flexrow">
+                <img class="sw-logo" src="modules/od6s-star-wars/templates/logo.webp" width="150">
+                <h1 class="charname">
+                    <input title="{{localize OD6S.CHAR_NAME}}" name="name" type="text" value="{{actor.name}}"
+                           placeholder="{{localize OD6S.CHAR_NAME}}" data-dtype="String"/>
+                </h1>
+            </div>
             <div class="grid grid-2col">
-		<div class="grid grid-4col header-fields">
-                <div class="flexrow flex-group-center">
-                    <label for="data.move.value">{{localize data.move.label}}:</label>
-                    <input title="{{localize data.move.label}}" name="data.move.value" type="number" min="0" max="99"
-                           value="{{data.move.value}}" placeholder="10" data-dtype="{{data.move.type}}"/>
+                <div>
+                    <label for="data.chartype.content">{{localize data.chartype.label}}:</label>
+                    <input title="{{localize data.chartype.label}}" name="data.chartype.content" type="text"
+                           value="{{data.chartype.content}}" placeholder="{{localize data.chartype.label}}"
+                           data-dtype="{{data.chartype.type}}"/>
                 </div>
-                <div class="flexrow flex-group-left">
-                    <label for="data.wounds.value">{{localize 'OD6S.WOUNDS'}}:</label>
-                    <select name="data.wounds.value" id="data.wounds.value" style="width: 70px;">
-                        {{#select data.wounds.value}}
-                        {{#each (getWoundLevels 'npc') as |level key|}}
-                        <option value="{{ key }}">
-                            {{localize (woundsFromValue key 'npc')}}
-                        </option>
-                        {{/each}}
-                        {{/select}}
-                    </select>
+                <div>
+                    <label for="data.species.content">{{localize data.species.label}}:</label>
+                    <input title="{{localize data.species.label}}" name="data.species.content" type="text"
+                           value="{{data.species.content}}" placeholder="{{localize data.species.label}}"
+                           data-dtype="{{data.species.type}}"/>
                 </div>
-                <div class="flexrow flex-group-left sheetmode">
-                    <label for="data.sheetmode.value">{{localize 'OD6S.SHEETMODE'}}:</label>
-                    <select name="data.sheetmode.value" id="data.sheetmode.value" style="width: 70px;">
-                        {{#select data.sheetmode.value}}
-                            <option value="normal">{{localize 'OD6S.SHEETMODE_NORMAL'}}</option>
-                            <option value="freeedit">{{localize 'OD6S.SHEETMODE_FREEDIT'}}</option>
-                        {{/select}}
-                    </select>
+            </div>
+            <div class="grid grid-2col">
+                <div class="grid grid-4col header-fields">
+                    <div class="flexrow flex-group-center">
+                        <label for="data.move.value">{{localize data.move.label}}:</label>
+                        <input title="{{localize data.move.label}}" name="data.move.value" type="number" min="0"
+                               max="99"
+                               value="{{data.move.value}}" placeholder="10" data-dtype="{{data.move.type}}"/>
+                    </div>
+                    <div class="flexrow flex-group-left">
+                        <label for="data.wounds.value">{{localize 'OD6S.WOUNDS'}}:</label>
+                        <select name="data.wounds.value" id="data.wounds.value" style="width: 70px;">
+                            {{#select data.wounds.value}}
+                                {{#each (getWoundLevels 'npc') as |level key|}}
+                                    <option value="{{ key }}">
+                                        {{localize (woundsFromValue key 'npc')}}
+                                    </option>
+                                {{/each}}
+                            {{/select}}
+                        </select>
+                    </div>
+                    <div class="flexrow flex-group-left sheetmode">
+                        <label for="data.sheetmode.value">{{localize 'OD6S.SHEETMODE'}}:</label>
+                        <select name="data.sheetmode.value" id="data.sheetmode.value" style="width: 70px;">
+                            {{#select data.sheetmode.value}}
+                                <option value="normal">{{localize 'OD6S.SHEETMODE_NORMAL'}}</option>
+                                <option value="freeedit">{{localize 'OD6S.SHEETMODE_FREEDIT'}}</option>
+                            {{/select}}
+                        </select>
+                    </div>
                 </div>
-            </div></div></div>
-<img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="200" width="200"
+            </div>
+        </div>
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="200" width="200"
              alt="Actor Image"/>
     </header>
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="main">{{localize 'OD6S.MAIN'}}</a>
         <a class="item" data-tab="combat">{{localize 'OD6S.TAB_COMBAT'}}</a>
+        {{#if (isCrewMember actor) }}
+            <a class="item" data-tab="vehicle">{{localize 'OD6S.TAB_VEHICLE'}}</a>
+        {{/if}}
         {{#if (eq data.sheetmode.value 'freeedit') }}
             <a class="item" data-tab="data"><i class="fas fa-cog"></i></a>
         {{/if}}
@@ -67,6 +77,9 @@
 
         {{!-- Combat Tab --}}
         {{> systems/od6s/templates/actor/common/tabs/combat.html}}
+
+        {{!-- Vehicle Tab --}}{{#if (isCrewMember actor) }}
+        {{> systems/od6s/templates/actor/common/tabs/vehicle.html}}{{/if}}
 
         {{#if (eq data.sheetmode.value 'freeedit') }}
         {{!-- Data Tab --}}

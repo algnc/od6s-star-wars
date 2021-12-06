@@ -2,36 +2,38 @@
     <form class="{{cssClass}} flexcol" autocomplete="off">
         {{!-- Sheet Header --}}
         <header class="sheet-header flex-group-left">
-            <div class="grid grid-2col">
-                <img class="sw-logo" src="modules/od6s-star-wars/templates/logo.webp" width="150">
-                <h1 class="charname">
-                    <input title="{{localize OD6S.CHAR_NAME}}" name="name" type="text" value="{{actor.name}}"
-                           placeholder="{{localize OD6S.CHAR_NAME}}" data-dtype="String"/>
-                </h1>
-                    <div>
-                        <div
-                            {{#if (eq data.sheetmode.value "freeedit")}}
-                            class="grid grid-3col-type"
-                            {{else}}
-                            class="grid grid-2col-type"
-                            {{/if}}>
-                            <label for="data.chartype.content"><b>{{localize data.chartype.label}}:</b></label>
-                            <input title="{{localize data.chartype.label}}" name="data.chartype.content" type="text"
-                                   value="{{data.chartype.content}}" placeholder="{{localize data.chartype.label}}"
-                                   data-dtype="{{data.chartype.type}}"/>
-                            {{#if (eq data.sheetmode.value "freeedit")}}
-                                <button class="reset-template">Clear</button>
-                            {{/if}}
-                        </div>
+            <div>
+                <div class="flexrow">
+                    <img class="sw-logo" src="modules/od6s-star-wars/templates/logo.webp" width="150">
+                    <h1 class="charname">
+                        <input title="{{localize OD6S.CHAR_NAME}}" name="name" type="text" value="{{actor.name}}"
+                               placeholder="{{localize OD6S.CHAR_NAME}}" data-dtype="String"/>
+                    </h1>
+                </div>
+                <div>
+                    <div
+                        {{#if (eq data.sheetmode.value "freeedit")}}
+                        class="grid grid-3col-type"
+                        {{else}}
+                        class="grid grid-2col-type"
+                        {{/if}}>
+                        <label for="data.chartype.content"><b>{{localize data.chartype.label}}:</b></label>
+                        <input title="{{localize data.chartype.label}}" name="data.chartype.content" type="text"
+                               value="{{data.chartype.content}}" placeholder="{{localize data.chartype.label}}"
+                               data-dtype="{{data.chartype.type}}"/>
+                        {{#if (eq data.sheetmode.value "freeedit")}}
+                            <button class="reset-template">Clear</button>
+                        {{/if}}
                     </div>
-                    <div>
-                        <div class="grid grid-2col-species">
-                            <label for="data.species.content"><b>{{localize data.species.label}}:</b></label>
-                            <input title="{{localize data.species.label}}" name="data.species.content" type="text"
-                                   value="{{data.species.content}}" placeholder="{{localize data.species.label}}"
-                                   data-dtype="{{data.species.type}}"/>
-                        </div>
+                </div>
+                <div>
+                    <div class="grid grid-2col-species">
+                        <label for="data.species.content"><b>{{localize data.species.label}}:</b></label>
+                        <input title="{{localize data.species.label}}" name="data.species.content" type="text"
+                               value="{{data.species.content}}" placeholder="{{localize data.species.label}}"
+                               data-dtype="{{data.species.type}}"/>
                     </div>
+                </div>
                 <div class="grid grid-2col">
                     <div class="grid grid-4col header-fields">
                         <div class="flexrow flex-group-center">
@@ -123,6 +125,9 @@
             {{#if data.metaphysicsextranormal.value}}
                 <a class="item" data-tab="metaphysics">{{getMetaphysicsName}}</a>
             {{/if}}
+            {{#if (isCrewMember actor) }}
+                <a class="item" data-tab="vehicle">{{localize 'OD6S.TAB_VEHICLE'}}</a>
+            {{/if}}
             <a class="item" data-tab="inventory">{{localize 'OD6S.TAB_INVENTORY'}}</a>
             <a class="item" data-tab="special-abilities">{{localize 'OD6S.TAB_SPECIAL_ABILITIES'}}</a>
             {{# if (hasCybernetics actor) }}
@@ -146,6 +151,9 @@
 
             {{!-- Inventory Tab --}}
             {{> systems/od6s/templates/actor/character/tabs/inventory.html}}
+
+            {{!-- Vehicle Tab --}}{{#if (isCrewMember actor) }}
+            {{> systems/od6s/templates/actor/common/tabs/vehicle.html}}{{/if}}
 
             {{!-- Owned Special Abilities Tab --}}
             {{> systems/od6s/templates/actor/common/tabs/special-abilities.html}}
