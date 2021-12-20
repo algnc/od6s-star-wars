@@ -1,0 +1,20 @@
+<div class=background-image>
+    <form class="{{cssClass}} flexcol" autocomplete="off">
+        {{!-- Sheet Header --}}
+        <header class="sheet-header flex-group-left">
+            <div>
+                <div class="flexrow">
+                    <img class="sw-logo" src="modules/od6s-star-wars/templates/logo.webp" width="150">
+                    <h1 class="charname">
+                        <input title="{{localize OD6S.CHAR_NAME}}" name="name" type="text" value="{{actor.name}}"
+                               placeholder="{{localize OD6S.CHAR_NAME}}" data-dtype="String"/>
+                    </h1>
+                </div>
+                {{> (getHeaderFormTemplate actor.type)}}
+            </div>
+            <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="200" width="200"
+                 alt="Actor Image"/>
+        </header>
+        {{> (getBodyTemplate actor.type)}}
+    </form>
+</div>
