@@ -11,22 +11,8 @@ import OD6SActorSheet from '/systems/od6s/module/actor/actor-sheet.js'
 class ActorSheetStarWars extends OD6SActorSheet {
   /** @override */
   get template() {
-        return `modules/od6s-star-wars/templates/character-sheet.html`;
+        return `modules/od6s-star-wars/templates/actor-sheet.html`;
     }
-
-  /** @override */
-  getData () {
-    const data = super.getData()
-    if (!data.darkSidePoints) {
-      this.actor.update({
-        'data.darkSidePoints': {
-          label: 'od6s-star-wars.darkSidePoints',
-          value: '0'
-        }
-      })
-    }
-    return data
-  }
 }
 
 export {

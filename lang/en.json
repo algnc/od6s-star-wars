@@ -1,8 +1,3 @@
 {
-  "od6s-star-wars.ActorSheetStarWars": "Star Wars",
-  "od6s-star-wars.NPCSheetStarWars": "Star Wars NPC",
-  "od6s-star-wars.CreatureSheetStarWars": "Star Wars Creature",
-  "od6s-star-wars.VehicleSheetStarWars": "Star Wars Vehicle",
-  "od6s-star-wars.StarshipSheetStarWars": "Star Wars Starship",
-  "od6s-star-wars.darkSidePoints": "Dark Side Points"
+  "od6s-star-wars.ActorSheetStarWars": "Star Wars"
 }
