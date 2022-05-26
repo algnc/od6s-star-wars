@@ -2,7 +2,7 @@
  * Star Wars character sheet overrides
  */
 
-import OD6SActorSheet from '/systems/od6s/module/actor/actor-sheet.js'
+import OD6SActorSheet from '../../../systems/od6s/module/actor/actor-sheet.js'
 
 /**
  * Extends the OD6S sheet for Star Wars 
