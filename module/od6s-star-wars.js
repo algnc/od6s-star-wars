@@ -26,6 +26,6 @@ preconnectLink2.crossOrigin = true; // Add crossorigin attribute for cross-origi
 document.head.appendChild(preconnectLink2);
 
 var fontStylesheet = document.createElement('link');
-fontStylesheet.href = 'https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=DM+Serif+Display&family=Domine:wght@400;700&family=Varela&display=swap';
+fontStylesheet.href = 'https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Domine:wght@400;700&display=swap';
 fontStylesheet.rel = 'stylesheet';
 document.head.appendChild(fontStylesheet);
