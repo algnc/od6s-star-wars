@@ -1,7 +1,334 @@
 .background-image {
     background-image: linear-gradient(#f6e09a, white);
+    border: solid black 2px;
 }
 
+/*this adds the blue-to-white vertical gradient behind the tan background image gradient*/
+ div[id^="ActorSheetStarWars"] .window-content {
+	background-image: linear-gradient(white,#92aaea); 
+	padding: 12px;
+	}
+	
+/* remove border and add underline to header inputs*/
+div[id^="ActorSheetStarWars"] header.sheet-header input[type="text"],
+div[id^="ActorSheetStarWars"] header.sheet-header input[type="number"] {
+	border: 0px;
+	border-radius: 0;
+	border-bottom: 2px solid black;
+    background: rgba(0, 0, 0, 0.00);
+	}
+	
+div[id^="ActorSheetStarWars"] header.sheet-header input[type="text"]:hover,
+div[id^="ActorSheetStarWars"] header.sheet-header input[type="number"]:hover {
+    background: rgba(0, 0, 0, 0.05);
+	}
+	
+div[id^="ActorSheetStarWars"] .sheet-header {
+	border: 0px solid var(--color-border-light-tertiary);
+	}
+
+div[id^="ActorSheetStarWars"] nav.sheet-tabs.tabs {
+	    border: none;
+	    border-top: 5px dotted maroon;
+	}
+	
+/* Barlow Condensed and Domine Fonts are open-source google fonts. The actual fonts used in the Star Wars 2nd Edition Revised and Expanded rulebook were ITC Cheltenham Std Book and ITC Serif Gothic Std Heavy but these are close spiritual substitutes. Also they're free.*/	
+	
+div[id^="ActorSheetStarWars"] nav.sheet-tabs.tabs a.item {
+    padding: 0px 12px;
+    padding-top: 2px;
+    padding-bottom: 3px
+    line-height: 40px;
+    font-weight: 500;
+    font-size: 21px;
+    font-family: barlow condensed;
+}
+
+/*This changes the color of the mouse hover shadow from red to grey, but only on sheets styled by star wars actor sheets*/
+div[id^="ActorSheetStarWars"] a:hover, 
+div[id^="ActorSheetStarWars"] .rolldialog:hover, 
+div[id^="ActorSheetStarWars"] .rolldialog:focus, 
+div[id^="ActorSheetStarWars"] .actionroll:hover, 
+div[id^="ActorSheetStarWars"] .actionroll:focus, 
+div[id^="ActorSheetStarWars"] .advancedialog:hover, 
+div[id^="ActorSheetStarWars"] .advancedialog:focus, 
+div[id^="ActorSheetStarWars"] .advanceup:hover, 
+div[id^="ActorSheetStarWars"] .advanceup:focus, 
+div[id^="ActorSheetStarWars"] .advancedown:hover, 
+div[id^="ActorSheetStarWars"] .advancedown:focus, 
+div[id^="ActorSheetStarWars"] .cpup:hover, 
+div[id^="ActorSheetStarWars"] .cpup:focus, 
+div[id^="ActorSheetStarWars"] .cpdown:hover, 
+div[id^="ActorSheetStarWars"] .cpdown:focus, 
+div[id^="ActorSheetStarWars"] .modifiers-button:hover, 
+div[id^="ActorSheetStarWars"] .modifiers-button:focus, 
+div[id^="ActorSheetStarWars"] .combat-action:hover, 
+div[id^="ActorSheetStarWars"] .combat-action:focus, 
+div[id^="ActorSheetStarWars"] .vehicle-action:hover, 
+div[id^="ActorSheetStarWars"] .vehicle-action:focus, 
+div[id^="ActorSheetStarWars"] .edit-difficulty:hover, 
+div[id^="ActorSheetStarWars"] .edit-difficulty:focus, 
+div[id^="ActorSheetStarWars"] .edit-damage:hover, 
+div[id^="ActorSheetStarWars"] .edit-damage:focus, 
+div[id^="ActorSheetStarWars"] .edit-effect:hover, 
+div[id^="ActorSheetStarWars"] .edit-effect:focus, 
+div[id^="ActorSheetStarWars"] .show-item-details:hover, 
+div[id^="ActorSheetStarWars"] .show-item-details:focus, 
+div[id^="ActorSheetStarWars"] .choose-target:hover, 
+div[id^="ActorSheetStarWars"] .choose-target:focus, 
+div[id^="ActorSheetStarWars"] .crew-member:hover, 
+div[id^="ActorSheetStarWars"] .crew-member:focus {
+    text-shadow: 0 0 8px #7c7356;
+    }
+    
+div[id^="ActorSheetStarWars"] select:focus {   
+    box-shadow: 0 0 5px #7c7356;
+}
+
+/*this adds a shadow when you focus or over on a fillable text box*/
+div[id^="ActorSheetStarWars"] input[type="text"]:focus, 
+div[id^="ActorSheetStarWars"] input[type="number"]:focus, 
+div[id^="ActorSheetStarWars"] input[type="password"]:focus, 
+div[id^="ActorSheetStarWars"] input[type="date"]:focus, 
+div[id^="ActorSheetStarWars"] input[type="time"]:focus, 
+div[id^="ActorSheetStarWars"] input[type="search"]:focus,  
+div[id^="ActorSheetStarWars"] input[type="text"]:hover,
+div[id^="ActorSheetStarWars"] input[type="number"]:hover {
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/*This makes the body text for form fields set to Domine*/
+div[id^="ActorSheetStarWars"] input[type="text"], 
+div[id^="ActorSheetStarWars"] input[type="number"], 
+div[id^="ActorSheetStarWars"] input[type="password"], 
+div[id^="ActorSheetStarWars"] input[type="date"], 
+div[id^="ActorSheetStarWars"] input[type="time"], 
+div[id^="ActorSheetStarWars"] input[type="search"] {
+	font-family:Domine;
+	font-size: 20px;
+	}
+
+	/* Character Name Styling*/
+	div[id^="ActorSheetStarWars"] .sheet-header h1 input {
+	font-weight: 600;
+	font-size: 28px;
+	padding-left: 3%;
+	border: 0px;
+	border-radius: 0;
+	border-bottom: 2px solid black;
+    background: rgba(0, 0, 0, 0.00);
+	}
+	
+div[id^="ActorSheetStarWars"] label {
+	font-family: barlow condensed;
+	font-size: 18px;
+    font-weight: 600;
+	}
+
+div[id^="ActorSheetStarWars"] nav.sheet-tabs.tabs a.item.active {
+	color: maroon;
+	text-decoration: none;
+    margin: 0px;
+    text-shadow: none;
+    border-bottom: 5px dotted maroon;
+}
+
+/* this adds some padding to the bottom of the sheet, separating the edit button*/
+div[id^="ActorSheetStarWars"] .sheet-body {
+    padding-bottom: 20px;
+}
+div[id^="ActorSheetStarWars"] section.sheet-mode {
+	padding: 2px;
+	margin: 16px;
+}
+
+/* this is styling the underlines and the spacing of the attributes and skills*/
+div[id^="ActorSheetStarWars"]  div.flexrow.flex-group-left.show-item-details,
+div[id^="ActorSheetStarWars"]  div.edit-quantity {
+	margin-left: 7px;
+}
+
+div[id^="ActorSheetStarWars"]  div.tab.inventory input[type="checkbox"] {
+	margin: 2px;
+}
+
+div[id^="ActorSheetStarWars"] .sheet-header .flex-group-left, 
+div[id^="ActorSheetStarWars"] .sheet-header .flex-group-center,
+div[id^="ActorSheetStarWars"] .sheet-mode .flex-group-left {
+	border: 0px;
+	}
+	
+div[id^="ActorSheetStarWars"] li.attributes > div.attributes.grid-2col-attributes,
+div[id^="ActorSheetStarWars"] div.attributes.grid-3col-attributes {	
+    font-family: 'Barlow Condensed';
+    font-size: 25px;
+    font-weight: bold;
+}
+div[id^="ActorSheetStarWars"] div.attributes.grid-2col-attributes:after {
+    content: "";
+    background: black;
+    bottom: 5px;
+    left: 33%;
+    height: 2px;
+    width: 89%;
+    position: relative;
+}
+
+div[id^="ActorSheetStarWars"] div.attributes.grid.grid-3col-attributes:after {  
+    content: "";
+    background: black;
+    bottom: 2px;
+    left: 39%;
+    height: 2px;
+    width: 113%;
+    position: relative;
+}
+
+/*skills styling*/
+div[id^="ActorSheetStarWars"] .item.skills.grid-2col-attributes {
+	padding-left: 25px; 
+	font-family: domine;
+	}
+	
+div[id^="ActorSheetStarWars"] .skills.grid.grid-3col-attributes {
+	padding: 2px;
+	padding-left: 25px; 
+	font-family: domine;
+	}
+	
+/*remove boxes on skills when in free edit and advance mode*/
+div[id^="ActorSheetStarWars"] .skills.grid.grid-3col-attributes > .flex-group-center, 
+div[id^="ActorSheetStarWars"] .skills.grid.grid-3col-attributes > .flex-group-left, 
+div[id^="ActorSheetStarWars"] .skills.grid.grid-3col-attributes > .flex-group-right,
+div[id^="ActorSheetStarWars"] .item.specialization.grid.grid-3col-attributes > .flex-group-center, 
+div[id^="ActorSheetStarWars"] .item.specialization.grid.grid-3col-attributes > .flex-group-left, 
+div[id^="ActorSheetStarWars"] .item.specialization.grid.grid-3col-attributes > .flex-group-right {
+	border: 0px;
+}
+
+div[id^="ActorSheetStarWars"] .item.skills.grid-2col-attributes:after {
+    content: "";
+    background: #33333338;
+    bottom: 3px;
+    left: 2%;
+    height: 1px;
+    width: 120%;
+    position: relative;
+    }
+    
+div[id^="ActorSheetStarWars"] .skills.grid.grid-3col-attributes:after {
+    content: "";
+    background: #33333338;
+    bottom: 0px;
+    left: 2%;
+    height: 1px;
+    width: 151%;
+    position: relative;
+    display: inherit;
+    }
+
+
+/*specializations styling 2col*/
+div[id^="ActorSheetStarWars"] .item.specializations > .attributes.grid-2col-attributes {
+	padding-left: 35px; 
+	font-family: domine;
+	}
+
+div[id^="ActorSheetStarWars"] .item.specializations > .attributes.grid-2col-attributes:after {
+	content: "";
+    background: #33333338;
+    bottom: 3px;
+    left: 6%;
+    height: 1px;
+    width: 116%;
+    position: relative;
+}
+
+/*specializations styling 3col*/
+div[id^="ActorSheetStarWars"] .item.specialization.grid.grid-3col-attributes {
+	padding: 2px;
+	padding-left: 35px; 
+	font-family: domine;
+	}
+	
+div[id^="ActorSheetStarWars"] .item.specialization.grid.grid-3col-attributes:after {
+	content: "";
+    background: #33333338;
+	bottom: 0px;
+    left: 6%;
+    height: 1px;
+    width: 148%;
+    position: relative;
+}
+
+div[id^="ActorSheetStarWars"] div.attribute.attributedialog.flex-group-center.rolldialog,
+div[id^="ActorSheetStarWars"] div.attribute.attributedialog.flex-group-center {
+	background-color: rgba(0,0,0,0);
+    color: black;
+    text-align: left;
+    padding-left: 10px;
+}
+
+div[id^="ActorSheetStarWars"] div.attribute.attributedialog.flex-group-center,
+div[id^="ActorSheetStarWars"] .rolldialog, .skilldialog.flex-group-left.rolldialog, 
+div[id^="ActorSheetStarWars"] div.attributes.grid.grid-3col-attributes .flex-group-center {
+    border: 0px solid #999;	
+}
+  
+ /* aligns and styles the text in species, type, credits, fp, cp, dsp, move*/  
+ div[id^="ActorSheetStarWars"] .grid-2col-species input, 
+ div[id^="ActorSheetStarWars"] .grid-2col-type input {
+ 	text-align: left;
+ 	padding-left: 10%;}
+ 
+ div[id^="ActorSheetStarWars"]	div.grid.grid-4col.header-fields input {
+	text-align: center;
+	}
+	
+div[id^="ActorSheetStarWars"] .sheet-header .grid-2col-species,
+div[id^="ActorSheetStarWars"] .grid-2col-type {	
+	padding-left: 10px;
+    padding-right: 10px;}
+ 
+ /* this makes the force points field longer to match the other fields */
+  div[id^="ActorSheetStarWars"] input[name="system.fatepoints.value"] {
+  	flex-grow: 2;
+  	}
+    
+  /*selects the credits field and makes it span up two grids*/
+  div[id^="ActorSheetStarWars"] > section > div > form > header > div > div:nth-child(2) > div.grid.grid-4col.header-fields > div:nth-child(5) {
+	grid-column: span 2;
+	}
+	
+ /*style color added to advance buttons */
+ div[id^="ActorSheetStarWars"] a.advancedialog, 
+ div[id^="ActorSheetStarWars"] a.specializedialog,
+ div[id^="ActorSheetStarWars"] div.advancedialog.flexrow.flex-group-center,
+ div[id^="ActorSheetStarWars"] div.item-add > a,
+ div[id^="ActorSheetStarWars"] div.attribute-edit > a,
+ div[id^="ActorSheetStarWars"] a.item-control.item-edit, 
+ div[id^="ActorSheetStarWars"] a.item-control.item-delete {
+ color: maroon;}
+ 
+ div[id^="ActorSheetStarWars"] button.reset-species-template {
+ 	color: white;
+    font-family: 'Barlow Condensed';
+    font-size: 18px;
+    }
+
+/* Style Wounds */    
+#actor\.system\.wounds\.value {
+	font-size: 14px;
+    font-family: domine;
+    text-align: center;
+	}
+div[id^="ActorSheetStarWars"] #actor\.system\.wounds\.value:focus {
+    box-shadow: none;
+}	
+	
+ /*div[id^="ActorSheetStarWars"] > section > div > form > header > div > div:nth-child(2) > div.grid.grid-4col.header-fields > div.flexrow.flex-group-left > label {}*/
+ 
 .sw-logo {
   flex: 0 0 150px !important;
   height: 75px !important;
@@ -13,5 +340,458 @@
   margin-left: 10px;
   border: 0px;
 }
+
+/*.                                                                    */
+/* Style Changes to Rollbox and dialog boxes to match style and fonts */
+/*                                                                   */
+ 
+
+/*header large font*/
+div[id^="app"] > section > div.dialog-content > form > div > p > b {
+	font-family: barlow Condensed;
+    font-weight: 700;
+    font-size: 22px;
+    }
+/*remove borders*/
+div[id^="app"] .flex-group-center,
+div[id^="app"] .flex-group-left {
+	border: 0px;
+	}
+     
+/*add underlines to each bottom line except for section headings*/    
+div[id^="app"] > section > div.dialog-content > form > div > div:not(.center) {
+    border-bottom: 1px solid #33333338;
+    margin-bottom: 2px;
+    font-family: barlow condensed;
+    font-size: 18px;
 }
 
+/*style center headings stronger*/
+div[id^="app"] > section > div.dialog-content > form > div > div.center {
+    	font-family: barlow condensed;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: left;
+    padding-top: 8px;
+    padding-bottom: 4px;
+}
+div[id^="app"] input[type="text"],
+div[id^="app"] select {
+	font-family: Domine;
+    font-size: 14px;
+}
+div[id^="app"] input[type="number"],
+div[id^="app"] div.boxed {
+	font-weight:700; 
+	color: black;
+	}
+	
+div[id^="app"] > section > div.dialog-content > form > div > div.flexrow.flex-group-left.usecharacterpoints > div:nth-child(1) {
+	flex: 1;
+	}
+
+div[id^="app"] > section > div.dialog-content > form > div > div.flexrow.flex-group-left.usecharacterpoints > div.flexrow.flex-group-center {
+	flex: .2;
+	}
+	
+div[id^="app"] input[type="number"]::placeholder {
+    color: black;
+}
+div[id^="app"] .row .flex-group-center input[type="number"] {
+    text-align: right;
+    border: 0px;
+    background: none;
+    border-radius: 0px;
+}
+div[id^="app"] .row .flex-group-center input[type="number"]:hover {
+background: rgba(0, 0, 0, 0.05);
+}
+
+div[id^="app"] .row .flex-group-center b {
+    text-align: left;
+}
+
+div[id^="app"] .column {
+	padding: 0px;
+}
+
+div[id^="app"] .flexrow.flex-group-left .bonusdice label {
+  flex: 0.5;
+}
+
+div[id^="app"] .flexrow.flex-group-left .bonusdice input[type="number"] {
+  max-width: 35px;
+  text-align: center;
+  border: 0px;
+  background: none;
+  border-radius: 0px;
+}
+div[id^="app"] .flexrow.flex-group-left .bonusdice input[type="number"]:hover {
+	background: rgba(0, 0, 0, 0.07);
+	}
+	
+	
+
+div[id^="app"] .flexrow.flex-group-left .bonuspips label {
+  flex: 0.5;
+}
+
+div[id^="app"] .flexrow.flex-group-left .bonuspips input[type="number"] {
+  max-width: 35px;
+  text-align: center;
+  border: 0px;
+  background: none;
+  border-radius: 0px;
+}
+
+div[id^="app"] .flexrow.flex-group-left .bonuspips input[type="number"]:hover {
+	background: rgba(0, 0, 0, 0.05);
+	}
+	
+div[id^="app"] #miscmod {
+	max-width: 35px;
+  text-align: center;
+  border: 0px;
+  background: none;
+  border-radius: 0px;}
+  
+div[id^="app"] .flexrow.flex-group-left.miscmod.modifier > label {
+	flex: .5;
+	}
+ 
+div[id^="app"] #miscmod:hover {
+	background: rgba(0, 0, 0, 0.05);
+	}
+	
+div[id^="app"] > section > div.dialog-buttons > button[data-button="submit"] {
+	font-family: barlow Condensed;
+    font-weight: 700;
+    font-size: 22px;
+	}
+
+div[id^="app"] .cpup, 
+div[id^="app"] .cpdown {
+	color: maroon;}
+	
+
+	
+/*.                                                                    */
+/* Back to styling the additional tabs on the character sheet.        */
+/*                                                                   */
+
+div[id^="ActorSheetStarWars"] .grid.title-add-grid .flexrow.flex-group-center b {
+	font-family: barlow condensed;
+    font-weight: 700;
+    font-size: 25px;
+    text-align: left;
+    padding-left: 1%;
+}
+div[id^="ActorSheetStarWars"] .grid.title-add-grid .flexrow.flex-group-center b:after {
+	 content: "";
+    background: black;
+    bottom: -1px;
+    left: 15%;
+    display: block;
+    height: 2px;
+    width: 100%;
+    position: relative;
+}
+
+div[id^="ActorSheetStarWars"] .grid.title-add-grid .flexrow.flex-group-center {
+	border: 0px;
+}
+
+/* controls armor/weapons/gear padding and alignment*/
+div[id^="ActorSheetStarWars"] .armor-list, 
+div[id^="ActorSheetStarWars"] .weapons-list,
+div[id^="ActorSheetStarWars"] .gear-list { 
+	padding-left: 3%;
+	}
+
+div[id^="ActorSheetStarWars"] .inv-grid.armor-grid > div.flexrow.flex-group-left.show-item-details,
+div[id^="ActorSheetStarWars"] .weapons.item  > .inv-grid > div.flexrow.flex-group-left.show-item-details {
+	margin-left: 13px;
+}
+
+/*style armor/weapons/gear lists*/
+div[id^="ActorSheetStarWars"] .armors.item { 
+	font-family: domine;
+	}
+
+div[id^="ActorSheetStarWars"] .armors.item .flex-group-left,
+div[id^="ActorSheetStarWars"] .armors.item .flex-group-center {
+	border: 0px;
+}
+
+div[id^="ActorSheetStarWars"] .armor-list .armors.item:after {
+    content: "";
+    background: #33333338;
+    bottom: 5px;
+    left: 2%;
+    display: block;
+    height: 1px;
+    width: 95%;
+    position: relative;
+    }
+
+div[id^="ActorSheetStarWars"] .flexrow.flex-group-center.item-controls > .item-add > .fas.fa-plus {
+	font-size: 22px;
+	color: maroon;
+	}
+	
+div[id^="ActorSheetStarWars"] span[title="Physical Resistance"], 
+div[id^="ActorSheetStarWars"] span[title="Energy Resistance"] {
+  font-weight: bold;
+}
+div[id^="ActorSheetStarWars"] .weapons.item {
+	font-family: domine;
+	}
+
+div[id^="ActorSheetStarWars"] .weapons.item > .inv-grid .flex-group-left,
+div[id^="ActorSheetStarWars"] .weapons.item > .inv-grid .flex-group-center {
+	border: 0px;
+}
+
+div[id^="ActorSheetStarWars"] .weapons-list .weapons.item:after {
+    content: "";
+    background: #33333338;
+    bottom: 5px;
+    left: 2%;
+    display: block;
+    height: 1px;
+    width: 95%;
+    position: relative;
+    }
+    
+div[id^="ActorSheetStarWars"] .gears.item {
+	font-family: domine;
+	}
+
+div[id^="ActorSheetStarWars"] .gears.item > .inv-grid .flex-group-left,
+div[id^="ActorSheetStarWars"] .gears.item > .inv-grid .flex-group-center {
+	border: 0px;
+}
+
+div[id^="ActorSheetStarWars"] .gear-list .gears.item:after {
+    content: "";
+    background: #33333338;
+    bottom: 5px;
+    left: 2%;
+    display: block;
+    height: 1px;
+    width: 95%;
+    position: relative;
+    }
+ 
+ div[id^="ActorSheetStarWars"] input[type="number"][name="gear.system.quantity"] {
+ 	color: maroon;
+    height: 20px;
+    width: 3.2ch;
+    border: none;
+    text-align: center;
+    position: relative;
+    bottom: -4px;
+    left: -2px;
+    font-family: domine;
+    font-weight: 700;
+    background: none;
+    font-size: 15px;
+    }
+    
+    div[id^="ActorSheetStarWars"] input[type="number"][name="gear.system.quantity"]:hover {
+background: rgba(0, 0, 0, 0.05);
+}
+    
+
+
+/* Better checkboxes? Yes please. */
+
+input[type="checkbox"][name="armor.system.equipped.value"],
+input[type="checkbox"][name="weapon.system.equipped.value"],
+input[type="checkbox"][name="gear.system.equipped.value"],
+input[type="checkbox"][name="system.created.value"],
+input[type="checkbox"][name="system.metaphysicsextranormal.value"],
+input[type="checkbox"][name="wilddie"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid maroon;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="checkbox"][name="armor.system.equipped.value"]:checked,
+input[type="checkbox"][name="weapon.system.equipped.value"]:checked, 
+input[type="checkbox"][name="gear.system.equipped.value"]:checked,
+input[type="checkbox"][name="system.created.value"]:checked,
+input[type="checkbox"][name="system.metaphysicsextranormal.value"]:checked,
+input[type="checkbox"][name="wilddie"]:checked {
+  background-color: maroon;
+}
+
+input[type="checkbox"][name="armor.system.equipped.value"]:checked::after,
+input[type="checkbox"][name="weapon.system.equipped.value"]:checked::after,
+input[type="checkbox"][name="gear.system.equipped.value"]:checked::after,
+input[type="checkbox"][name="system.created.value"]:checked::after,
+input[type="checkbox"][name="system.metaphysicsextranormal.value"]:checked::after,
+input[type="checkbox"][name="wilddie"]:checked::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 11px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(41deg);
+  margin: 0px 0 0 4px;
+}
+
+/* when metaphysics button selected, make the checkbox look black in normal mode*/
+input[type="checkbox"][name="system.metaphysicsextranormal.value"]:checked:disabled {
+  background: none;
+  border: none;
+  cursor: default;
+}
+input[type="checkbox"][name="system.metaphysicsextranormal.value"]:disabled::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 11px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  transform: rotate(41deg);
+  margin: 4px 0 0 4px;
+}
+
+/*I'm quite proud of this: use the force luke!*/
+/* When the force point button is clicked, make lots of shiny flares and pulses */
+@keyframes glow-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7),
+                0 0 0 0 rgba(255, 255, 255, 0.5),
+                0 0 0 0 rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0),
+                0 0 0 15px rgba(255, 255, 255, 0),
+                0 0 0 30px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7),
+                0 0 0 0 rgba(255, 255, 255, 0.5),
+                0 0 0 0 rgba(255, 255, 255, 0.3);
+  }
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(6);
+  }
+  15% {
+    opacity: 1;
+    transform: translate(-17px, -17px) scale(1);
+  }
+  19%{
+  	opacity: 0;
+    transform: translate(-17px, -17px) scale(1);
+  }
+  20% {
+  	opacity: 1;
+    transform: translate(0, 0) scale(6);
+  }
+  35% {
+    opacity: 1;
+    transform: translate(15px, 0px) scale(1);
+  }
+  39% {
+  	opacity: 0;
+    transform: translate(15px, 0px) scale(1);
+  }
+  40% {
+    opacity: 1;
+    transform: translate(0, 0) scale(8);
+  }
+  55% {
+  	opacity: 1;
+    transform: translate(17px, -17px) scale(2);
+  }
+  59% {
+    opacity: 0;
+    transform: translate(17px, -17px) scale(2);
+  }
+  60% {
+  	opacity: 1;
+    transform: translate(0, 0) scale(5);
+  }
+  75% {
+    opacity: 1;
+    transform: translate(-15px, 15px) scale(1);
+  }
+  79% {
+  	opacity: 0;
+    transform: translate(-15px, 15px) scale(1);
+  }
+  80% {
+  	opacity: 1;
+    transform: translate(0, 0) scale(6);
+  }
+  95% {
+    opacity: 1;
+    transform: translate(13px, 13px) scale(3);
+  }
+  99% {
+    opacity: 0;
+    transform: translate(13px, 13px) scale(3);
+  }
+}
+
+input[type="checkbox"]#fpInEffect,
+input[type="checkbox"]#fatepoint {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid maroon;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+input[type="checkbox"]#fpInEffect:checked,
+input[type="checkbox"]#fatepoint:checked {
+  background-color: white;
+  border: 2px solid white;
+  animation: glow-pulse 3s infinite;
+}
+
+input[type="checkbox"]#fpInEffect:checked::after,
+input[type="checkbox"]#fatepoint:checked::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 11px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  transform: rotate(41deg);
+  margin: 0px 0 0 4px;
+}
+
+input[type="checkbox"]#fpInEffect:checked::before,
+input[type="checkbox"]#fatepoint:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3px;
+  height: 3px;
+  background-color: white;
+  border-radius: 50%;
+  animation: sparkle 1.5s infinite;
+  animation-delay: 0.25s
+}
