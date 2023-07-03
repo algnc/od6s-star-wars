@@ -17,4 +17,24 @@
         </header>
         {{> (getBodyTemplate actor.type)}}
     </form>
+    <script>
+    //Make Wounds more visible, depending on value selected.
+    $(document).ready(function() {
+        const selectElement = $('#actor\\.system\\.wounds\\.value');
+        const labelElement = $('div[id^="ActorSheetStarWars"] > section > div > form > header > div > div:nth-child(2) > div.grid.grid-4col.header-fields > div.flexrow.flex-group-left > label');
+
+        // Function to handle show/hide label based on dropdown value
+        function handleLabelVisibility() {
+            const selectedValue = parseInt(selectElement.val());
+            if (selectedValue >= 1 && selectedValue <= 6) {
+                labelElement.hide(0);
+            } else {
+                labelElement.show(0);
+            }
+        }
+
+        // Hide label on page load if the initial value is 1-6
+        handleLabelVisibility();
+    });
+</script>
 </div>
