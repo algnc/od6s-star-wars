@@ -1,0 +1,40 @@
+<div class=background-image>
+    <form class="{{cssClass}} flexcol" autocomplete="off">
+        {{!-- Sheet Header --}}
+        <header class="sheet-header flex-group-left">
+            <div>
+                <div class="flexrow">
+                    <img class="sw-logo" src="modules/od6s-star-wars/templates/logo-1e.webp" width="150">
+                    <h1 class="charname">
+                        <input title="{{localize OD6S.CHAR_NAME}}" name="name" type="text" value="{{actor.name}}"
+                               placeholder="{{localize OD6S.CHAR_NAME}}" data-dtype="String"/>
+                    </h1>
+                </div>
+                {{> (getHeaderFormTemplate actor.type)}}
+            </div>
+            <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="200" width="200"
+                 alt="Actor Image"/>
+        </header>
+        {{> (getBodyTemplate actor.type)}}
+    </form>
+    <script>
+    //Make Wounds more visible, depending on value selected.
+    $(document).ready(function() {
+        const selectElement = $('#actor\\.system\\.wounds\\.value');
+        const labelElement = $('div[id^="ActorSheetStarW1e"] > section > div > form > header > div > div:nth-child(2) > div.grid.grid-4col.header-fields > div.flexrow.flex-group-left > label');
+
+        // Function to handle show/hide label based on dropdown value
+        function handleLabelVisibility() {
+            const selectedValue = parseInt(selectElement.val());
+            if (selectedValue >= 1 && selectedValue <= 6) {
+                labelElement.hide(0);
+            } else {
+                labelElement.show(0);
+            }
+        }
+
+        // Hide label on page load if the initial value is 1-6
+        handleLabelVisibility();
+    });
+</script>
+</div>

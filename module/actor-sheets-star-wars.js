@@ -11,10 +11,17 @@ import OD6SActorSheet from '../../../systems/od6s/module/actor/actor-sheet.js'
 class ActorSheetStarWars extends OD6SActorSheet {
   /** @override */
   get template() {
-        return `modules/od6s-star-wars/templates/actor-sheet.html`;
+        return `modules/od6s-star-wars/templates/actor-sheet-tan.html`;
+    }
+}
+class ActorSheetStarW1e extends OD6SActorSheet {
+  /** @override */
+  get template() {
+        return `modules/od6s-star-wars/templates/actor-sheet-white.html`;
     }
 }
 
 export {
-  ActorSheetStarWars
+  ActorSheetStarWars,
+  ActorSheetStarW1e
 }

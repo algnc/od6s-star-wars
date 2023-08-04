@@ -1,6 +1,6 @@
 # Star Wars sheets for Open D6 in Foundry VTT
 
-Expands the [Open D6 System](https://gitlab.com/vtt2/opend6-space) for the [Foundry Virtual Tabletop](https://foundryvtt.com) to include Star WarsD6 - 2nd Edition Revised and Expanded character sheets.
+Expands the [Open D6 System](https://gitlab.com/vtt2/opend6-space) for the [Foundry Virtual Tabletop](https://foundryvtt.com) to include Star WarsD6 - 2nd Edition Revised and Expanded character sheets. And now with 1st edition sheets! (@DarthBanjo)
 
 Manifest URL: https://raw.githubusercontent.com/algnc/od6s-star-wars/master/module.json 
 
