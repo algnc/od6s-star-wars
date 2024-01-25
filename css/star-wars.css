@@ -7,65 +7,65 @@
 
 
 div[id^="ActorSheetStarWars"] .background-image {
-    background-image: linear-gradient(#f6e09a, white);
-    border: solid black 2px;
+  background-image: linear-gradient(#f6e09a, white);
+  border: solid black 2px;
 }
 
 div[id^="ActorSheetStarW1e"] .background-image {
-    background: white;
-    border: solid black 2px;
-    border-radius: 12px;
+  background: white;
+  border: solid black 2px;
+  border-radius: 12px;
 }
 
 /*this adds the blue-to-white vertical gradient behind the tan background image gradient*/
- div[id^="ActorSheetStarWars"] .window-content {
-	background-image: linear-gradient(white,#92aaea); 
-	padding: 12px;
-	}
+div[id^="ActorSheetStarWars"] .window-content {
+background-image: linear-gradient(white,#92aaea); 
+padding: 12px;
+}
 /*1E background*/	
- div[id^="ActorSheetStarW1e"] .window-content {
-	background: white; 
-	padding: 12px;
-	}
-	
+div[id^="ActorSheetStarW1e"] .window-content {
+background: white; 
+padding: 12px;
+}
+
 /* remove border and add underline to header inputs*/
 div[id^="ActorSheetStarW"] header.sheet-header input[type="text"],
 div[id^="ActorSheetStarW"] header.sheet-header input[type="number"] {
-	border: 0px;
-	border-radius: 0;
-	border-bottom: 2px solid black;
-    background: rgba(0, 0, 0, 0.00);
-	}
-	
+border: 0px;
+border-radius: 0;
+border-bottom: 2px solid black;
+  background: rgba(0, 0, 0, 0.00);
+}
+
 div[id^="ActorSheetStarW"] header.sheet-header input[type="text"]:hover,
 div[id^="ActorSheetStarW"] header.sheet-header input[type="number"]:hover {
-    background: rgba(0, 0, 0, 0.05);
-	}
-	
+  background: rgba(0, 0, 0, 0.05);
+}
+
 div[id^="ActorSheetStarW"] .sheet-header {
-	border: 0px solid var(--color-border-light-tertiary);
-	}
+border: 0px solid var(--color-border-light-tertiary);
+}
 
 div[id^="ActorSheetStarWars"] nav.sheet-tabs.tabs {
-	    border: none;
-	    border-top: 5px dotted maroon;
-	}
-	
+    border: none;
+    border-top: 5px dotted maroon;
+}
+
 div[id^="ActorSheetStarW1e"] nav.sheet-tabs.tabs {
-	    border: none;
-	    border-top: 2px solid black;
-	}
-	
+    border: none;
+    border-top: 2px solid black;
+}
+
 /* Barlow Condensed and Domine Fonts are open-source google fonts. The actual fonts used in the Star Wars 2nd Edition Revised and Expanded rulebook were ITC Cheltenham Std Book and ITC Serif Gothic Std Heavy but these are close spiritual substitutes. Also they're free.*/	
-	
+
 div[id^="ActorSheetStarW"] nav.sheet-tabs.tabs a.item {
-    padding: 0px 12px;
-    padding-top: 2px;
-    padding-bottom: 3px
-    line-height: 40px;
-    font-weight: 500;
-    font-size: 21px;
-    font-family: barlow condensed;
+  padding: 0px 12px;
+  padding-top: 2px;
+  padding-bottom: 3px;
+  line-height: 40px;
+  font-weight: 500;
+  font-size: 21px;
+  font-family: barlow condensed;
 }
 
 /*This changes the color of the mouse hover shadow from red to grey, but only on sheets styled by star wars actor sheets*/
@@ -102,11 +102,11 @@ div[id^="ActorSheetStarW"] .choose-target:hover,
 div[id^="ActorSheetStarW"] .choose-target:focus, 
 div[id^="ActorSheetStarW"] .crew-member:hover, 
 div[id^="ActorSheetStarW"] .crew-member:focus {
-    text-shadow: 0 0 8px #7c7356;
-    }
-    
+  text-shadow: 0 0 8px #7c7356;
+  }
+  
 div[id^="ActorSheetStarW"] select:focus {   
-    box-shadow: 0 0 5px #7c7356;
+  box-shadow: 0 0 5px #7c7356;
 }
 
 /*this adds a shadow when you focus or over on a fillable text box*/
@@ -118,8 +118,8 @@ div[id^="ActorSheetStarW"] input[type="time"]:focus,
 div[id^="ActorSheetStarW"] input[type="search"]:focus,  
 div[id^="ActorSheetStarW"] input[type="text"]:hover,
 div[id^="ActorSheetStarW"] input[type="number"]:hover {
-    box-shadow: none;
-    background: rgba(0, 0, 0, 0.05);
+  box-shadow: none;
+  background: rgba(0, 0, 0, 0.05);
 }
 
 /*This makes the body text for form fields set to Domine*/
@@ -129,111 +129,115 @@ div[id^="ActorSheetStarW"] input[type="password"],
 div[id^="ActorSheetStarW"] input[type="date"], 
 div[id^="ActorSheetStarW"] input[type="time"], 
 div[id^="ActorSheetStarW"] input[type="search"] {
-	font-family:Domine;
-	font-size: 17px;
-	}
+font-family:Domine;
+font-size: 17px;
+}
 
-	/* Character Name Styling*/
+/* Character Name Styling*/
 div[id^="ActorSheetStarW"] .sheet-header h1 input {
-	font-weight: 600;
-	font-size: 28px;
-	padding-left: 3%;
-	border: 0px;
-	border-radius: 0;
-	border-bottom: 2px solid black;
-    background: rgba(0, 0, 0, 0.00);
-	}
-	
+font-weight: 600;
+font-size: 28px;
+padding-left: 3%;
+border: 0px;
+border-radius: 0;
+border-bottom: 2px solid black;
+  background: rgba(0, 0, 0, 0.00);
+}
+
 div[id^="ActorSheetStarW"] label {
-	font-family: barlow condensed;
-	font-size: 18px;
-    font-weight: 600;
-	}
+font-family: barlow condensed;
+font-size: 18px;
+  font-weight: 600;
+}
 
 div[id^="ActorSheetStarWars"] nav.sheet-tabs.tabs a.item.active {
-	color: maroon;
-	text-decoration: none;
-    margin: 0px;
-    text-shadow: none;
-    border-bottom: 5px dotted maroon;
+color: maroon;
+text-decoration: none;
+  margin: 0px;
+  text-shadow: none;
+  border-bottom: 5px dotted maroon;
 }
 
 div[id^="ActorSheetStarW1e"] nav.sheet-tabs.tabs a.item.active {
-	color: black;
-	text-decoration: none;
-    margin: 0px;
-    text-shadow: none;
-    border-bottom: 2px solid black;
+color: black;
+text-decoration: none;
+  margin: 0px;
+  text-shadow: none;
+  border-bottom: 2px solid black;
 }
 
 /* this adds some padding to the bottom of the sheet, separating the edit button*/
 div[id^="ActorSheetStarW"] .sheet-body {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 div[id^="ActorSheetStarW"] section.sheet-mode {
-	padding: 2px;
-	margin: 16px;
+padding: 2px;
+margin: 16px;
 }
 
 /* this is styling the underlines and the spacing of the attributes and skills*/
 div[id^="ActorSheetStarW"]  div.flexrow.flex-group-left.show-item-details,
 div[id^="ActorSheetStarW"]  div.edit-quantity {
-	margin-left: 7px;
+margin-left: 7px;
 }
 
 div[id^="ActorSheetStarW"]  div.tab.inventory input[type="checkbox"] {
-	margin: 2px;
+margin: 2px;
 }
 
 div[id^="ActorSheetStarW"] .sheet-header .flex-group-left, 
 div[id^="ActorSheetStarW"] .sheet-header .flex-group-center,
 div[id^="ActorSheetStarW"] .sheet-mode .flex-group-left {
-	border: 0px;
-	}
-	
+border: 0px;
+}
+
+div[id^="ActorSheetStarW"] .flex-group-center, .flex-group-left, .flex-group-right {	
+border: 0px;
+}
+
 div[id^="ActorSheetStarW"] li.attributes > div.attributes.grid-2col-attributes,
 div[id^="ActorSheetStarW"] div.attributes.grid-3col-attributes,
 div[id^="ActorSheetStarW"] div.attributes.grid-2col-attributes {	
-    font-family: 'Barlow Condensed';
-    font-size: 25px;
-    font-weight: bold;
+  font-family: 'Barlow Condensed';
+  font-size: 25px;
+  font-weight: bold;
 }
 div[id^="ActorSheetStarWars"] div.attributes.grid-2col-attributes:after,
 div[id^="ActorSheetStarW1e"] div.attributes.grid-2col-attributes:after{
-    content: "";
-    background: black;
-    bottom: 5px;
-    left: 33%;
-    height: 2px;
-    width: 89%;
-    position: relative;
+  content: "";
+  background: black;
+  bottom: 5px;
+  left: 33%;
+  height: 2px;
+  width: 89%;
+  position: relative;
 }
 
 div[id^="ActorSheetStarWars"] div.attributes.grid-3col-attributes:after,
 div[id^="ActorSheetStarW1e"] div.attributes.grid-3col-attributes:after {  
-    content: "";
-    background: black;
-    bottom: 2px;
-    left: 39%;
-    height: 2px;
-    width: 113%;
-    position: relative;
+  content: "";
+  background: black;
+  bottom: 2px;
+  left: 39%;
+  height: 2px;
+  width: 113%;
+  position: relative;
 }
 
 /*skills styling*/
 div[id^="ActorSheetStarWars"] .item.skills.grid-2col-attributes, 
 div[id^="ActorSheetStarW1e"] .item.skills.grid-2col-attributes {
-	padding-left: 25px; 
-	font-family: domine;
-	}
-	
+padding-left: 25px; 
+font-family: domine;
+}
+
 div[id^="ActorSheetStarWars"] .skills.grid.grid-3col-attributes, 
 div[id^="ActorSheetStarW1e"] .skills.grid.grid-3col-attributes{
-	padding: 2px;
-	padding-left: 25px; 
-	font-family: domine;
-	}
-	
+padding: 2px;
+padding-left: 25px; 
+font-family: domine;
+}
+
 /*remove boxes on skills when in free edit and advance mode*/
 div[id^="ActorSheetStarW"] .skills.grid.grid-3col-attributes > .flex-group-center, 
 div[id^="ActorSheetStarW"] .skills.grid.grid-3col-attributes > .flex-group-left, 
@@ -241,419 +245,421 @@ div[id^="ActorSheetStarW"] .skills.grid.grid-3col-attributes > .flex-group-right
 div[id^="ActorSheetStarW"] .item.specialization.grid.grid-3col-attributes > .flex-group-center, 
 div[id^="ActorSheetStarW"] .item.specialization.grid.grid-3col-attributes > .flex-group-left, 
 div[id^="ActorSheetStarW"] .item.specialization.grid.grid-3col-attributes > .flex-group-right {
-	border: 0px;
+border: 0px;
 }
 
 div[id^="ActorSheetStarW"] .item.skills.grid-2col-attributes:after {
-    content: "";
-    background: #33333338;
-    bottom: 3px;
-    left: 2%;
-    height: 1px;
-    width: 120%;
-    position: relative;
-    }
-    
+  content: "";
+  background: #33333338;
+  bottom: 3px;
+  left: 2%;
+  height: 1px;
+  width: 120%;
+  position: relative;
+  }
+  
 div[id^="ActorSheetStarW"] .skills.grid.grid-3col-attributes:after {
-    content: "";
-    background: #33333338;
-    bottom: 0px;
-    left: 2%;
-    height: 1px;
-    width: 151%;
-    position: relative;
-    display: inherit;
-    }
+  content: "";
+  background: #33333338;
+  bottom: 0px;
+  left: 2%;
+  height: 1px;
+  width: 151%;
+  position: relative;
+  display: inherit;
+  }
 
 
 /*specializations styling 2col*/
 div[id^="ActorSheetStarW"] .item.specializations > .attributes.grid-2col-attributes {
-	padding-left: 35px; 
-	font-family: domine;
-	}
+padding-left: 35px; 
+font-family: domine;
+font-size: 14px;
+}
 
 div[id^="ActorSheetStarW"] .item.specializations > .attributes.grid-2col-attributes:after {
-	content: "";
-    background: #33333338;
-    bottom: 3px;
-    left: 6%;
-    height: 1px;
-    width: 116%;
-    position: relative;
+content: "";
+  background: #33333338;
+  bottom: 3px;
+  left: 6%;
+  height: 1px;
+  width: 116%;
+  position: relative;
 }
 
 /*specializations styling 3col*/
 div[id^="ActorSheetStarW"] .item.specialization.grid.grid-3col-attributes {
-	padding: 2px;
-	padding-left: 35px; 
-	font-family: domine;
-	}
-	
+padding: 2px;
+padding-left: 35px; 
+font-family: domine;
+font-weight: bold;
+}
+
 div[id^="ActorSheetStarW"] .item.specialization.grid.grid-3col-attributes:after {
-	content: "";
-    background: #33333338;
-	bottom: 0px;
-    left: 6%;
-    height: 1px;
-    width: 148%;
-    position: relative;
+content: "";
+  background: #33333338;
+bottom: 0px;
+  left: 6%;
+  height: 1px;
+  width: 148%;
+  position: relative;
 }
 
 div[id^="ActorSheetStarW"] div.attributedialog.flex-group-center.rolldialog,
 div[id^="ActorSheetStarW"] div.attributedialog.flex-group-center {
-	background-color: rgba(0,0,0,0);
-    color: black;
-    text-align: left;
-    padding-left: 10px;
+background-color: rgba(0,0,0,0);
+  color: black;
+  text-align: left;
+  padding-left: 10px;
 }
 
 div[id^="ActorSheetStarW"] div.attributedialog.flex-group-center,
 div[id^="ActorSheetStarW"] .rolldialog, .skilldialog.flex-group-left.rolldialog, 
 div[id^="ActorSheetStarW"] div.attributes.grid-3col-attributes .flex-group-center {
-    border: 0px solid #999;	
+  border: 0px solid #999;	
 }
-  
- /* aligns and styles the text in species, type, credits, fp, cp, dsp, move*/  
- div[id^="ActorSheetStarW"] .grid-2col-species input, 
- div[id^="ActorSheetStarW"] .grid-2col-type input {
- 	text-align: left;
- 	padding-left: 10%;}
- 
- div[id^="ActorSheetStarW"]	div.grid.grid-4col.header-fields input {
-	text-align: center;
-	}
-	
+
+/* aligns and styles the text in species, type, credits, fp, cp, dsp, move*/  
+div[id^="ActorSheetStarW"] .grid-2col-species input, 
+div[id^="ActorSheetStarW"] .grid-2col-type input {
+ text-align: left;
+ padding-left: 10%;}
+
+div[id^="ActorSheetStarW"]	div.grid.grid-4col.header-fields input {
+text-align: center;
+}
+
 div[id^="ActorSheetStarW"] .sheet-header .grid-2col-species,
 div[id^="ActorSheetStarW"] .grid-2col-type {	
-	padding-left: 10px;
-    padding-right: 10px;}
- 
- /* this makes the force points field longer to match the other fields */
-  div[id^="ActorSheetStarW"] input[name="system.fatepoints.value"] {
-  	flex-grow: 2;
-  	}
-    
-  /*selects the credits field and makes it span up two grids*/
-  div[id^="ActorSheetStarW"] > section > div > form > header > div > div:nth-child(2) > div.grid.grid-4col.header-fields > div:nth-child(5) {
-	grid-column: span 2;
-	}
-	
- /*style color added to advance buttons */
- div[id^="ActorSheetStarWars"] a.advancedialog, 
- div[id^="ActorSheetStarWars"] a.specializedialog,
- div[id^="ActorSheetStarWars"] div.advancedialog.flexrow.flex-group-center,
- div[id^="ActorSheetStarWars"] div.item-add > a,
- div[id^="ActorSheetStarWars"] div.attribute-edit > a,
- div[id^="ActorSheetStarWars"] a.item-control.item-edit, 
- div[id^="ActorSheetStarWars"] a.item-control.item-delete {
- color: maroon;}
- 
- div[id^="ActorSheetStarW"] button.reset-species-template {
- 	color: white;
-    font-family: 'Barlow Condensed';
-    font-size: 18px;
-    }
+padding-left: 10px;
+  padding-right: 10px;}
+
+/* this makes the force points field longer to match the other fields */
+div[id^="ActorSheetStarW"] input[name="system.fatepoints.value"] {
+  flex-grow: 2;
+  }
+  
+/*selects the credits field and makes it span up two grids*/
+div[id^="ActorSheetStarW"] > section > div > form > header > div > div:nth-child(2) > div.grid.grid-4col.header-fields > div:nth-child(5) {
+grid-column: span 2;
+}
+
+/*style color added to advance buttons */
+div[id^="ActorSheetStarWars"] a.advancedialog, 
+div[id^="ActorSheetStarWars"] a.specializedialog,
+div[id^="ActorSheetStarWars"] div.advancedialog.flexrow.flex-group-center,
+div[id^="ActorSheetStarWars"] div.item-add > a,
+div[id^="ActorSheetStarWars"] div.attribute-edit > a,
+div[id^="ActorSheetStarWars"] a.item-control.item-edit, 
+div[id^="ActorSheetStarWars"] a.item-control.item-delete {
+color: maroon;}
+
+div[id^="ActorSheetStarW"] button.reset-species-template {
+ color: white;
+  font-family: 'Barlow Condensed';
+  font-size: 18px;
+  }
 
 /* Style Wounds */    
 #actor\.system\.wounds\.value {
-	font-size: 14px;
-    font-family: domine;
-    text-align: center;
-	}
+font-size: 14px;
+  font-family: domine;
+  text-align: center;
+}
 div[id^="ActorSheetStarW"] #actor\.system\.wounds\.value:focus {
-    box-shadow: none;
+  box-shadow: none;
 }	
-	
- /*div[id^="ActorSheetStarWars"] > section > div > form > header > div > div:nth-child(2) > div.grid.grid-4col.header-fields > div.flexrow.flex-group-left > label {}*/
- 
+
+/*div[id^="ActorSheetStarWars"] > section > div > form > header > div > div:nth-child(2) > div.grid.grid-4col.header-fields > div.flexrow.flex-group-left > label {}*/
+
 .sw-logo {
-  flex: 0 0 150px !important;
-  height: 75px !important;
-  margin-right: 10px;
-  border: 0px;
+flex: 0 0 150px !important;
+height: 75px !important;
+margin-right: 10px;
+border: 0px;
 }
 
 div[id^="ActorSheetStarW"].od6s .sheet-header .profile-img {
-	margin-right: 3px;
-	}
+margin-right: 3px;
+}
 
 .profile-img {
-  margin-left: 10px;
-  border: 0px;
+margin-left: 10px;
+border: 0px;
 }
 
 div[id^="ActorSheetStarW1e"] .profile-img {
-	border-radius: 12px;
-	}
+border-radius: 12px;
+}
 
 /*.                                                                    */
 /* Style Changes to Rollbox and dialog boxes to match style and fonts */
 /*                                                                   */
- 
+
 
 /*header large font*/
 div[id^="app"] > section > div.dialog-content > form > div > p > b {
-	font-family: barlow Condensed;
-    font-weight: 700;
-    font-size: 22px;
-    }
+font-family: barlow Condensed;
+  font-weight: 700;
+  font-size: 22px;
+  }
 /*remove borders*/
 div[id^="app"] .flex-group-center,
 div[id^="app"] .flex-group-left {
-	border: 0px;
-	}
-     
+border: 0px;
+}
+   
 /*add underlines to each bottom line except for section headings*/    
 div[id^="app"] > section > div.dialog-content > form > div > div:not(.center) {
-    border-bottom: 1px solid #33333338;
-    margin-bottom: 2px;
-    font-family: barlow condensed;
-    font-size: 18px;
+  border-bottom: 1px solid #33333338;
+  margin-bottom: 2px;
+  font-family: barlow condensed;
+  font-size: 18px;
 }
 
 /*style center headings stronger*/
 div[id^="app"] > section > div.dialog-content > form > div > div.center {
-    	font-family: barlow condensed;
-    font-weight: 500;
-    font-size: 18px;
-    text-align: left;
-    padding-top: 8px;
-    padding-bottom: 4px;
+    font-family: barlow condensed;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: left;
+  padding-top: 8px;
+  padding-bottom: 4px;
 }
 div[id^="app"] input[type="text"],
 div[id^="app"] select {
-	font-family: Domine;
-    font-size: 14px;
+font-family: Domine;
+  font-size: 14px;
 }
 div[id^="app"] input[type="number"],
 div[id^="app"] div.boxed {
-	font-weight:700; 
-	color: black;
-	}
-	
+font-weight:700; 
+color: black;
+}
+
 div[id^="app"] > section > div.dialog-content > form > div > div.flexrow.flex-group-left.usecharacterpoints > div:nth-child(1) {
-	flex: 1;
-	}
+flex: 1;
+}
 
 div[id^="app"] > section > div.dialog-content > form > div > div.flexrow.flex-group-left.usecharacterpoints > div.flexrow.flex-group-center {
-	flex: .2;
-	}
-	
+flex: .2;
+}
+
 div[id^="app"] input[type="number"]::placeholder {
-    color: black;
+  color: black;
 }
 div[id^="app"] .row .flex-group-center input[type="number"] {
-    text-align: right;
-    border: 0px;
-    background: none;
-    border-radius: 0px;
+  text-align: right;
+  border: 0px;
+  background: none;
+  border-radius: 0px;
 }
 div[id^="app"] .row .flex-group-center input[type="number"]:hover {
 background: rgba(0, 0, 0, 0.05);
 }
 
 div[id^="app"] .row .flex-group-center b {
-    text-align: left;
+  text-align: left;
 }
 
 div[id^="app"] .column {
-	padding: 0px;
+padding: 0px;
 }
 
 div[id^="app"] .flexrow.flex-group-left .bonusdice label {
-  flex: 0.5;
+flex: 0.5;
 }
 
 div[id^="app"] .flexrow.flex-group-left .bonusdice input[type="number"] {
-  max-width: 35px;
-  text-align: center;
-  border: 0px;
-  background: none;
-  border-radius: 0px;
+max-width: 35px;
+text-align: center;
+border: 0px;
+background: none;
+border-radius: 0px;
 }
 div[id^="app"] .flexrow.flex-group-left .bonusdice input[type="number"]:hover {
-	background: rgba(0, 0, 0, 0.07);
-	}
-	
-	
+background: rgba(0, 0, 0, 0.07);
+}
+
+
 
 div[id^="app"] .flexrow.flex-group-left .bonuspips label {
-  flex: 0.5;
+flex: 0.5;
 }
 
 div[id^="app"] .flexrow.flex-group-left .bonuspips input[type="number"] {
-  max-width: 35px;
-  text-align: center;
-  border: 0px;
-  background: none;
-  border-radius: 0px;
+max-width: 35px;
+text-align: center;
+border: 0px;
+background: none;
+border-radius: 0px;
 }
 
 div[id^="app"] .flexrow.flex-group-left .bonuspips input[type="number"]:hover {
-	background: rgba(0, 0, 0, 0.05);
-	}
-	
+background: rgba(0, 0, 0, 0.05);
+}
+
 div[id^="app"] #miscmod {
-	max-width: 35px;
-  text-align: center;
-  border: 0px;
-  background: none;
-  border-radius: 0px;}
-  
+max-width: 35px;
+text-align: center;
+border: 0px;
+background: none;
+border-radius: 0px;}
+
 div[id^="app"] .flexrow.flex-group-left.miscmod.modifier > label {
-	flex: .5;
-	}
- 
+flex: .5;
+}
+
 div[id^="app"] #miscmod:hover {
-	background: rgba(0, 0, 0, 0.05);
-	}
-	
+background: rgba(0, 0, 0, 0.05);
+}
+
 div[id^="app"] > section > div.dialog-buttons > button[data-button="submit"] {
-	font-family: barlow Condensed;
-    font-weight: 700;
-    font-size: 22px;
-	}
+font-family: barlow Condensed;
+  font-weight: 700;
+  font-size: 22px;
+}
 
 div[id^="app"] .cpup, 
 div[id^="app"] .cpdown {
-	color: black;}
-	
+color: black;}
 
-	
+
+
 /*.                                                                    */
 /* Back to styling the additional tabs on the character sheet.        */
 /*                                                                   */
 
 div[id^="ActorSheetStarW"] .grid.title-add-grid .flexrow.flex-group-center b {
-	font-family: barlow condensed;
-    font-weight: 700;
-    font-size: 25px;
-    text-align: left;
-    padding-left: 1%;
+font-family: barlow condensed;
+  font-weight: 700;
+  font-size: 25px;
+  text-align: left;
+  padding-left: 1%;
 }
 div[id^="ActorSheetStarW"] .grid.title-add-grid .flexrow.flex-group-center b:after {
-	 content: "";
-    background: black;
-    bottom: -1px;
-    left: 15%;
-    display: block;
-    height: 2px;
-    width: 100%;
-    position: relative;
+ content: "";
+  background: black;
+  bottom: -1px;
+  left: 15%;
+  display: block;
+  height: 2px;
+  width: 100%;
+  position: relative;
 }
 
 div[id^="ActorSheetStarW"] .grid.title-add-grid .flexrow.flex-group-center {
-	border: 0px;
+border: 0px;
 }
 
 /* controls armor/weapons/gear padding and alignment*/
 div[id^="ActorSheetStarW"] .armor-list, 
 div[id^="ActorSheetStarW"] .weapons-list,
 div[id^="ActorSheetStarW"] .gear-list { 
-	padding-left: 3%;
-	}
+padding-left: 3%;
+}
 
 div[id^="ActorSheetStarW"] .inv-grid.armor-grid > div.flexrow.flex-group-left.show-item-details,
 div[id^="ActorSheetStarW"] .weapons.item  > .inv-grid > div.flexrow.flex-group-left.show-item-details {
-	margin-left: 13px;
+margin-left: 13px;
 }
 
 /*style armor/weapons/gear lists*/
 div[id^="ActorSheetStarW"] .armors.item { 
-	font-family: domine;
-	}
+font-family: domine;
+}
 
 div[id^="ActorSheetStarW"] .armors.item .flex-group-left,
 div[id^="ActorSheetStarW"] .armors.item .flex-group-center {
-	border: 0px;
+border: 0px;
 }
 
 div[id^="ActorSheetStarW"] .armor-list .armors.item:after {
-    content: "";
-    background: #33333338;
-    bottom: 5px;
-    left: 2%;
-    display: block;
-    height: 1px;
-    width: 95%;
-    position: relative;
-    }
+  content: "";
+  background: #33333338;
+  bottom: 5px;
+  left: 2%;
+  display: block;
+  height: 1px;
+  width: 95%;
+  position: relative;
+  }
 
 div[id^="ActorSheetStarWars"] .flexrow.flex-group-center.item-controls > .item-add > .fas.fa-plus {
-	font-size: 22px;
-	color: maroon;
-	}
-	
+font-size: 22px;
+color: maroon;
+}
+
 div[id^="ActorSheetStarW1e"] .flexrow.flex-group-center.item-controls > .item-add > .fas.fa-plus {
-	font-size: 22px;
-	color: black;
-	}
-	
+font-size: 22px;
+color: black;
+}
+
 div[id^="ActorSheetStarW"] span[title="Physical Resistance"], 
 div[id^="ActorSheetStarW"] span[title="Energy Resistance"] {
-  font-weight: bold;
+font-weight: bold;
 }
 div[id^="ActorSheetStarW"] .weapons.item {
-	font-family: domine;
-	}
+font-family: domine;
+}
 
 div[id^="ActorSheetStarW"] .weapons.item > .inv-grid .flex-group-left,
 div[id^="ActorSheetStarW"] .weapons.item > .inv-grid .flex-group-center {
-	border: 0px;
+border: 0px;
 }
 
 div[id^="ActorSheetStarW"] .weapons-list .weapons.item:after {
-    content: "";
-    background: #33333338;
-    bottom: 5px;
-    left: 2%;
-    display: block;
-    height: 1px;
-    width: 95%;
-    position: relative;
-    }
-    
+  content: "";
+  background: #33333338;
+  bottom: 5px;
+  left: 2%;
+  display: block;
+  height: 1px;
+  width: 95%;
+  position: relative;
+  }
+  
 div[id^="ActorSheetStarW"] .gears.item {
-	font-family: domine;
-	}
+font-family: domine;
+}
 
 div[id^="ActorSheetStarW"] .gears.item > .inv-grid .flex-group-left,
 div[id^="ActorSheetStarW"] .gears.item > .inv-grid .flex-group-center {
-	border: 0px;
+border: 0px;
 }
 
 div[id^="ActorSheetStarW"] .gear-list .gears.item:after {
-    content: "";
-    background: #33333338;
-    bottom: 5px;
-    left: 2%;
-    display: block;
-    height: 1px;
-    width: 95%;
-    position: relative;
-    }
- 
- div[id^="ActorSheetStarW"] input[type="number"][name="gear.system.quantity"] {
-    height: 20px;
-    width: 3.2ch;
-    border: none;
-    text-align: center;
-    position: relative;
-    bottom: -4px;
-    left: -2px;
-    font-family: domine;
-    font-weight: 700;
-    background: none;
-    font-size: 15px;
-    }
+  content: "";
+  background: #33333338;
+  bottom: 5px;
+  left: 2%;
+  display: block;
+  height: 1px;
+  width: 95%;
+  position: relative;
+  }
+
+div[id^="ActorSheetStarW"] input[type="number"][name="gear.system.quantity"] {
+  height: 20px;
+  width: 3.2ch;
+  border: none;
+  text-align: center;
+  position: relative;
+  bottom: -4px;
+  left: -2px;
+  font-family: domine;
+  font-weight: 700;
+  background: none;
+  font-size: 15px;
+  }
 div[id^="ActorSheetStarWars"] input[type="number"][name="gear.system.quantity"] {
-    color: maroon;
+  color: maroon;
 }
-    
-    div[id^="ActorSheetStarW"] input[type="number"][name="gear.system.quantity"]:hover {
+  
+  div[id^="ActorSheetStarW"] input[type="number"][name="gear.system.quantity"]:hover {
 background: rgba(0, 0, 0, 0.05);
 }
-    
+  
 
 
 /* Better checkboxes? Yes please. */
@@ -664,15 +670,15 @@ div[id^="ActorSheetStarWars"] input[type="checkbox"][name="gear.system.equipped.
 div[id^="ActorSheetStarWars"] input[type="checkbox"][name="system.created.value"],
 div[id^="ActorSheetStarWars"] input[type="checkbox"][name="system.metaphysicsextranormal.value"],
 div[id^="ActorSheetStarWars"] input[type="checkbox"][name="wilddie"] {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 22px;
-  height: 22px;
-  border: 2px solid maroon;
-  border-radius: 3px;
-  outline: none;
-  cursor: pointer;
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+width: 22px;
+height: 22px;
+border: 2px solid maroon;
+border-radius: 3px;
+outline: none;
+cursor: pointer;
 }
 
 div[id^="ActorSheetStarW1e"] input[type="checkbox"][name="armor.system.equipped.value"],
@@ -681,15 +687,15 @@ div[id^="ActorSheetStarW1e"] input[type="checkbox"][name="gear.system.equipped.v
 div[id^="ActorSheetStarW1e"] input[type="checkbox"][name="system.created.value"],
 div[id^="ActorSheetStarW1e"] input[type="checkbox"][name="system.metaphysicsextranormal.value"],
 div[id^="ActorSheetStarW1e"] input[type="checkbox"][name="wilddie"] {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 22px;
-  height: 22px;
-  border: 2px solid black;
-  border-radius: 3px;
-  outline: none;
-  cursor: pointer;
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+width: 22px;
+height: 22px;
+border: 2px solid black;
+border-radius: 3px;
+outline: none;
+cursor: pointer;
 }
 
 div[id^="ActorSheetStarWars"] input[type="checkbox"][name="armor.system.equipped.value"]:checked,
@@ -698,7 +704,7 @@ div[id^="ActorSheetStarWars"] input[type="checkbox"][name="gear.system.equipped.
 div[id^="ActorSheetStarWars"] input[type="checkbox"][name="system.created.value"]:checked,
 div[id^="ActorSheetStarWars"] input[type="checkbox"][name="system.metaphysicsextranormal.value"]:checked,
 div[id^="ActorSheetStarWars"] input[type="checkbox"][name="wilddie"]:checked {
-  background-color: maroon;
+background-color: maroon;
 }
 div[id^="ActorSheetStarW1e"] input[type="checkbox"][name="armor.system.equipped.value"]:checked,
 div[id^="ActorSheetStarW1e"] input[type="checkbox"][name="weapon.system.equipped.value"]:checked, 
@@ -706,7 +712,7 @@ div[id^="ActorSheetStarW1e"] input[type="checkbox"][name="gear.system.equipped.v
 div[id^="ActorSheetStarW1e"] input[type="checkbox"][name="system.created.value"]:checked,
 div[id^="ActorSheetStarW1e"] input[type="checkbox"][name="system.metaphysicsextranormal.value"]:checked,
 div[id^="ActorSheetStarW1e"] input[type="checkbox"][name="wilddie"]:checked {
-  background-color: black;
+background-color: black;
 }
 
 input[type="checkbox"][name="armor.system.equipped.value"]:checked::after,
@@ -715,273 +721,273 @@ input[type="checkbox"][name="gear.system.equipped.value"]:checked::after,
 input[type="checkbox"][name="system.created.value"]:checked::after,
 input[type="checkbox"][name="system.metaphysicsextranormal.value"]:checked::after,
 input[type="checkbox"][name="wilddie"]:checked::after {
-  content: "";
-  display: block;
-  width: 6px;
-  height: 11px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  transform: rotate(41deg);
-  margin: 0px 0 0 4px;
+content: "";
+display: block;
+width: 6px;
+height: 11px;
+border: solid white;
+border-width: 0 3px 3px 0;
+transform: rotate(41deg);
+margin: 0px 0 0 4px;
 }
 
 /* when metaphysics button selected, make the checkbox look black in normal mode*/
 div[id^="ActorSheetStarW"] input[type="checkbox"][name="system.metaphysicsextranormal.value"]:checked:disabled {
-  background: none;
-  border: none;
-  cursor: default;
+background: none;
+border: none;
+cursor: default;
 }
 div[id^="ActorSheetStarW"] input[type="checkbox"][name="system.metaphysicsextranormal.value"]:disabled::after {
-  content: "";
-  display: block;
-  width: 6px;
-  height: 11px;
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  transform: rotate(41deg);
-  margin: 4px 0 0 4px;
+content: "";
+display: block;
+width: 6px;
+height: 11px;
+border: solid black;
+border-width: 0 3px 3px 0;
+transform: rotate(41deg);
+margin: 4px 0 0 4px;
 }
 
 /*I'm quite proud of this: use the force luke!*/
 /* When the force point button is clicked, make lots of shiny flares and pulses */
 @keyframes glow-pulse-2e {
-  0% {
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7),
-                0 0 0 0 rgba(255, 255, 255, 0.5),
-                0 0 0 0 rgba(255, 255, 255, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0),
-                0 0 0 15px rgba(255, 255, 255, 0),
-                0 0 0 30px rgba(255, 255, 255, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7),
-                0 0 0 0 rgba(255, 255, 255, 0.5),
-                0 0 0 0 rgba(255, 255, 255, 0.3);
-  }
+0% {
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7),
+              0 0 0 0 rgba(255, 255, 255, 0.5),
+              0 0 0 0 rgba(255, 255, 255, 0.3);
+}
+50% {
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0),
+              0 0 0 15px rgba(255, 255, 255, 0),
+              0 0 0 30px rgba(255, 255, 255, 0);
+}
+100% {
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7),
+              0 0 0 0 rgba(255, 255, 255, 0.5),
+              0 0 0 0 rgba(255, 255, 255, 0.3);
+}
 }
 
 @keyframes sparkle-2e {
-  0% {
-    opacity: 1;
-    transform: translate(0, 0) scale(6);
-  }
-  15% {
-    opacity: 1;
-    transform: translate(-17px, -17px) scale(1);
-  }
-  19%{
-  	opacity: 0;
-    transform: translate(-17px, -17px) scale(1);
-  }
-  20% {
-  	opacity: 1;
-    transform: translate(0, 0) scale(6);
-  }
-  35% {
-    opacity: 1;
-    transform: translate(15px, 0px) scale(1);
-  }
-  39% {
-  	opacity: 0;
-    transform: translate(15px, 0px) scale(1);
-  }
-  40% {
-    opacity: 1;
-    transform: translate(0, 0) scale(8);
-  }
-  55% {
-  	opacity: 1;
-    transform: translate(17px, -17px) scale(2);
-  }
-  59% {
-    opacity: 0;
-    transform: translate(17px, -17px) scale(2);
-  }
-  60% {
-  	opacity: 1;
-    transform: translate(0, 0) scale(5);
-  }
-  75% {
-    opacity: 1;
-    transform: translate(-15px, 15px) scale(1);
-  }
-  79% {
-  	opacity: 0;
-    transform: translate(-15px, 15px) scale(1);
-  }
-  80% {
-  	opacity: 1;
-    transform: translate(0, 0) scale(6);
-  }
-  95% {
-    opacity: 1;
-    transform: translate(13px, 13px) scale(3);
-  }
-  99% {
-    opacity: 0;
-    transform: translate(13px, 13px) scale(3);
-  }
+0% {
+  opacity: 1;
+  transform: translate(0, 0) scale(6);
+}
+15% {
+  opacity: 1;
+  transform: translate(-17px, -17px) scale(1);
+}
+19%{
+  opacity: 0;
+  transform: translate(-17px, -17px) scale(1);
+}
+20% {
+  opacity: 1;
+  transform: translate(0, 0) scale(6);
+}
+35% {
+  opacity: 1;
+  transform: translate(15px, 0px) scale(1);
+}
+39% {
+  opacity: 0;
+  transform: translate(15px, 0px) scale(1);
+}
+40% {
+  opacity: 1;
+  transform: translate(0, 0) scale(8);
+}
+55% {
+  opacity: 1;
+  transform: translate(17px, -17px) scale(2);
+}
+59% {
+  opacity: 0;
+  transform: translate(17px, -17px) scale(2);
+}
+60% {
+  opacity: 1;
+  transform: translate(0, 0) scale(5);
+}
+75% {
+  opacity: 1;
+  transform: translate(-15px, 15px) scale(1);
+}
+79% {
+  opacity: 0;
+  transform: translate(-15px, 15px) scale(1);
+}
+80% {
+  opacity: 1;
+  transform: translate(0, 0) scale(6);
+}
+95% {
+  opacity: 1;
+  transform: translate(13px, 13px) scale(3);
+}
+99% {
+  opacity: 0;
+  transform: translate(13px, 13px) scale(3);
+}
 }
 
 @keyframes glow-pulse-1e {
-  0% {
-    box-shadow: 0 0 0 0 rgba(0,183,235, 0.7),
-                0 0 0 0 rgba(0,183,235, 0.5),
-                0 0 0 0 rgba(0,183,235, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 0 10px rgba(0,183,235, 0),
-                0 0 0 15px rgba(0,183,235, 0),
-                0 0 0 30px rgba(0,183,235, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(0,183,235, 0.7),
-                0 0 0 0 rgba(0,183,235, 0.5),
-                0 0 0 0 rgba(0,183,235, 0.3);
-  }
+0% {
+  box-shadow: 0 0 0 0 rgba(0,183,235, 0.7),
+              0 0 0 0 rgba(0,183,235, 0.5),
+              0 0 0 0 rgba(0,183,235, 0.3);
+}
+50% {
+  box-shadow: 0 0 0 10px rgba(0,183,235, 0),
+              0 0 0 15px rgba(0,183,235, 0),
+              0 0 0 30px rgba(0,183,235, 0);
+}
+100% {
+  box-shadow: 0 0 0 0 rgba(0,183,235, 0.7),
+              0 0 0 0 rgba(0,183,235, 0.5),
+              0 0 0 0 rgba(0,183,235, 0.3);
+}
 }
 
 @keyframes sparkle-1e {
-  0% {
-    opacity: 1;
-    transform: translate(0, 0) scale(6);
-  }
-  15% {
-    opacity: 1;
-    transform: translate(-17px, -17px) scale(1);
-  }
-  19%{
-  	opacity: 0;
-    transform: translate(-17px, -17px) scale(1);
-  }
-  20% {
-  	opacity: 1;
-    transform: translate(0, 0) scale(6);
-  }
-  35% {
-    opacity: 1;
-    transform: translate(15px, 0px) scale(1);
-  }
-  39% {
-  	opacity: 0;
-    transform: translate(15px, 0px) scale(1);
-  }
-  40% {
-    opacity: 1;
-    transform: translate(0, 0) scale(8);
-  }
-  55% {
-  	opacity: 1;
-    transform: translate(17px, -17px) scale(2);
-  }
-  59% {
-    opacity: 0;
-    transform: translate(17px, -17px) scale(2);
-  }
-  60% {
-  	opacity: 1;
-    transform: translate(0, 0) scale(5);
-  }
-  75% {
-    opacity: 1;
-    transform: translate(-15px, 15px) scale(1);
-  }
-  79% {
-  	opacity: 0;
-    transform: translate(-15px, 15px) scale(1);
-  }
-  80% {
-  	opacity: 1;
-    transform: translate(0, 0) scale(6);
-  }
-  95% {
-    opacity: 1;
-    transform: translate(13px, 13px) scale(3);
-  }
-  99% {
-    opacity: 0;
-    transform: translate(13px, 13px) scale(3);
-  }
+0% {
+  opacity: 1;
+  transform: translate(0, 0) scale(6);
+}
+15% {
+  opacity: 1;
+  transform: translate(-17px, -17px) scale(1);
+}
+19%{
+  opacity: 0;
+  transform: translate(-17px, -17px) scale(1);
+}
+20% {
+  opacity: 1;
+  transform: translate(0, 0) scale(6);
+}
+35% {
+  opacity: 1;
+  transform: translate(15px, 0px) scale(1);
+}
+39% {
+  opacity: 0;
+  transform: translate(15px, 0px) scale(1);
+}
+40% {
+  opacity: 1;
+  transform: translate(0, 0) scale(8);
+}
+55% {
+  opacity: 1;
+  transform: translate(17px, -17px) scale(2);
+}
+59% {
+  opacity: 0;
+  transform: translate(17px, -17px) scale(2);
+}
+60% {
+  opacity: 1;
+  transform: translate(0, 0) scale(5);
+}
+75% {
+  opacity: 1;
+  transform: translate(-15px, 15px) scale(1);
+}
+79% {
+  opacity: 0;
+  transform: translate(-15px, 15px) scale(1);
+}
+80% {
+  opacity: 1;
+  transform: translate(0, 0) scale(6);
+}
+95% {
+  opacity: 1;
+  transform: translate(13px, 13px) scale(3);
+}
+99% {
+  opacity: 0;
+  transform: translate(13px, 13px) scale(3);
+}
 }
 
 div[id^="ActorSheetStarW"] input[type="checkbox"]#fpInEffect,
 div[id^="ActorSheetStarW"] input[type="checkbox"]#fatepoint {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 22px;
-  height: 22px;
-  border: 2px solid black;
-  border-radius: 3px;
-  outline: none;
-  cursor: pointer;
-  position: relative;
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+width: 22px;
+height: 22px;
+border: 2px solid black;
+border-radius: 3px;
+outline: none;
+cursor: pointer;
+position: relative;
 }
 div[id^="ActorSheetStarWars"] input[type="checkbox"]#fpInEffect,
 div[id^="ActorSheetStarWars"] input[type="checkbox"]#fatepoint {
-  border: 2px solid maroon;
+border: 2px solid maroon;
 }
 
 div[id^="ActorSheetStarWars"] input[type="checkbox"]#fpInEffect:checked,
 div[id^="ActorSheetStarWars"] input[type="checkbox"]#fatepoint:checked {
-  background-color: white;
-  border: 2px solid white;
-  animation: glow-pulse-2e 3s infinite;
+background-color: white;
+border: 2px solid white;
+animation: glow-pulse-2e 3s infinite;
 }
 
 div[id^="ActorSheetStarW1e"] input[type="checkbox"]#fpInEffect:checked,
 div[id^="ActorSheetStarW1e"] input[type="checkbox"]#fatepoint:checked {
-  background-color: cyan;
-  border: 2px solid cyan;
-  animation: glow-pulse-1e 3s infinite;
+background-color: cyan;
+border: 2px solid cyan;
+animation: glow-pulse-1e 3s infinite;
 }
 
 div[id^="ActorSheetStarW"] input[type="checkbox"]#fpInEffect:checked::after,
 div[id^="ActorSheetStarW"] input[type="checkbox"]#fatepoint:checked::after {
-  content: "";
-  display: block;
-  width: 6px;
-  height: 11px;
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  transform: rotate(41deg);
-  margin: 0px 0 0 4px;
+content: "";
+display: block;
+width: 6px;
+height: 11px;
+border: solid black;
+border-width: 0 3px 3px 0;
+transform: rotate(41deg);
+margin: 0px 0 0 4px;
 }
 
 div[id^="ActorSheetStarW"] input[type="checkbox"]#fpInEffect:checked::before,
 div[id^="ActorSheetStarW"] input[type="checkbox"]#fatepoint:checked::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  animation-delay: 0.25s
+content: "";
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 3px;
+height: 3px;
+border-radius: 50%;
+animation-delay: 0.25s
 }
 
 div[id^="ActorSheetStarWars"] input[type="checkbox"]#fpInEffect:checked::before,
 div[id^="ActorSheetStarWars"] input[type="checkbox"]#fatepoint:checked::before {
-  background-color: white;
-  animation: sparkle-2e 1.5s infinite;
+background-color: white;
+animation: sparkle-2e 1.5s infinite;
 }
 
 div[id^="ActorSheetStarW1e"] input[type="checkbox"]#fpInEffect:checked::before,
 div[id^="ActorSheetStarW1e"] input[type="checkbox"]#fatepoint:checked::before {
-  background-color: cyan;
-  animation: sparkle-1e 1.5s infinite;
+background-color: cyan;
+animation: sparkle-1e 1.5s infinite;
 }
 
 /* To-do:
-	- 2nd edition Combat Tab
-	- Special Abilities
-	- The force
-	- Biography boxes
-	- Cybernetics
-	- Ships
-	- Vehicles
-	
+- 2nd edition Combat Tab
+- Special Abilities
+- The force
+- Biography boxes
+- Cybernetics
+- Ships
+- Vehicles
+
 */
