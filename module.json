@@ -2,7 +2,7 @@
   "name": "od6s-star-wars",
   "title": "Star Wars Sheets for OpenD6",
   "description": "Star Wars Sheets for OpenD6 in FoundryVTT!",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "authors": [
     {
       "name": "Christian Ovsenik"
@@ -11,7 +11,7 @@
   "compatibility": {
       "minimum": "10",
       "verified": "11",
-      "maximum": "11"
+      "maximum": "12"
   },
     "relationships": {
     "systems": [
